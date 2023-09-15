@@ -3,4 +3,4 @@ This is the repo for my personal website. It is mainly used to host HTML based s
 
 Links to GitHub Pages version of each model:
 
-[Severance Main Character] (https://jordanbrist.github.io/Website/MainCharacter)
+[Severance Main Character](https://jordanbrist.github.io/Website/MainCharacter)
