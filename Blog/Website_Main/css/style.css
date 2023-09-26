@@ -1,0 +1,799 @@
+@font-face {
+    font-family: GG Light;
+    src: url(../fonts/GGX88\ W01\ Light.ttf);
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: GG ExtraLight;
+    src: url(../fonts/GGX88\ W01\ ExtraLight.ttf);
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: GG UltraLight;
+    src: url(../fonts/GGX88\ W01\ UltraLight.ttf);
+    font-weight: normal;
+  }
+  
+  html,body
+  {
+      width: 100%;
+      height: 100%;      
+      margin: 0px;
+      padding: 0px;
+      overflow-x: hidden; 
+  }
+ 
+  #recent {
+    position: absolute;
+    color: #27496d;   
+    height: 15px;
+    width: 100%;
+    left: 0px;
+    top: 220px;
+    font-family: 'GG Extralight', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    #recent {
+        position: absolute;
+        color: #27496d;
+        height: 15px;
+        width: 100%;
+        left: 0px;
+        top: 355px;
+        font-family: 'GG Extralight', Arial, sans-serif;
+        font-weight: normal;
+        font-size: 35px;
+        text-align: center;
+        padding-top: 35px;
+    }
+}  
+
+.logo1{
+    content:url("../images/Logo_1.png");
+    display: block;
+    padding-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40%;
+    animation: logoAnim 1s ease 0s 1 normal forwards;
+
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .logo1{
+        content:url("../images/Logo_1.png");
+        display: block;
+        padding-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 40%;
+        animation: logoAnim 1s ease 0s 1 normal forwards;
+        
+    }
+}
+
+@keyframes logoAnim {
+    0% {
+      transform: scale(0);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+    .logo2{
+        position: absolute;
+        top: 15px;
+        left: 12px;
+        content: url("../images/Logo_2.png");
+        display: block;
+        max-width: 4%;
+    }
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .logo2{
+        position: absolute;
+        content: url("../images/Logo_2.png");
+        display: block;
+        max-width: 10%;
+        left: 20px;
+        top: 12px;
+    }
+}
+
+header {
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    background: linear-gradient(0deg, #547aa2, #547aa2 33.33%, #27496d 33.33%, #27496d 66.66%, #17324f 66.66%);
+    font-family: 'GG Light', Arial, sans-serif;
+    text-align: center; 
+    height: 250px;
+    width: 100%;
+}
+
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    header {
+        position: fixed;
+        top: 65px;
+        left: 0px;
+        background: linear-gradient(180deg, #547aa2, #547aa2 33.33%, #27496d 33.33%, #27496d 66.66%, #17324f 66.66%);
+        font-family: 'GG Light', Arial, sans-serif;
+        text-align: center; 
+        height: 400px;
+        width: 100%;
+    }
+}
+
+.header2 {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    background: #27496d;
+    color: white;
+    font-family: 'GG Light', Arial, sans-serif;
+    text-align: center; 
+    height: 60px;
+    width: 100%;
+}
+
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .header2 {
+        position: absolute;
+        top: 65px;
+        left: 0px;
+        background: #27496d;
+        color: white;
+        font-family: 'GG Light', Arial, sans-serif;
+        text-align: center; 
+        height: 90px;
+        width: 100%;
+    }
+}
+
+.header3 {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    background: #547aa2;
+    color: white;
+    font-family: 'GG Light', Arial, sans-serif;
+    text-align: center; 
+    height: 60px;
+    width: 100%;
+}
+
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .header3 {
+        position: absolute;
+        top: 65px;
+        left: 0px;
+        background: #547aa2;
+        color: white;
+        font-family: 'GG Light', Arial, sans-serif;
+        text-align: center; 
+        height: 90px;
+        width: 100%;
+    }
+}
+
+.header4 {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    background: #17324f;
+    color: white;
+    font-family: 'GG Light', Arial, sans-serif;
+    text-align: center; 
+    height: 60px;
+    width: 100%;
+}
+
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .header4 {
+        position: absolute;
+        top: 65px;
+        left: 0px;
+        background: #17324f;
+        color: white;
+        font-family: 'GG Light', Arial, sans-serif;
+        text-align: center; 
+        height: 90px;
+        width: 100%;
+    }
+}
+
+
+.headerText {
+    color: white;
+    text-align: center;
+    font-family: 'GG UltraLight', Arial, Sans-serif;
+    margin: auto;
+    font-size: 40px;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-position: under;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .headerText {
+        color: white;
+        text-align: center;
+        font-family: 'GG UltraLight', Arial, Sans-serif;
+        margin: auto;
+        font-size: 60px;
+        text-decoration-line: underline;
+        text-decoration-thickness: 1px;
+        text-underline-position: under;
+    }
+}
+
+.headerText2 {
+    color: white;
+    text-align: center;
+    font-family: 'GG UltraLight', Arial, Sans-serif;
+    margin: auto;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .headerText2 {
+        color: white;
+        text-align: center;
+        font-family: 'GG UltraLight', Arial, Sans-serif;
+        margin: auto;
+        font-size: 60px;
+        text-decoration: none;
+    }
+}
+
+
+.footer {
+    position: fixed;
+    background-color: #27496d;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2em;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .footer {
+        position: fixed;
+        background-color: #27496d;
+        bottom: 0;
+        width: 100%;
+        height: 3em;
+    }
+}
+
+/* these columns and rows are for the footer logos*/
+.column {
+    float: right;
+    width: 4%;
+    padding: 5px;
+    padding-top: 6px;
+    margin-right: 10px;
+  }
+
+  /* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .column {
+        float: right;
+        width: 1.8%;
+        padding: 5px;
+        padding-top: 6px;
+        margin-right: 10px;
+      }
+}
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .column:hover {
+    color: black;
+    border-radius: 50%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#contact{
+    position: absolute;
+    top: 125px;
+    left: 0px;
+    background-color: white;
+    font-family: 'GG Extralight', Arial, sans-serif;
+    font-size: 16px;
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    #contact{
+        position: absolute;
+        top: 150px;
+        left: 0px;
+        background-color: white;
+        font-family: 'GG Extralight', Arial, sans-serif;
+        font-size: 20px;
+        margin-top: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+#about{
+    position: absolute;
+    top: 150px;
+    background-color: white;
+    font-family: 'GG Light', Arial, sans-serif;
+    font-size: 16px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    #about{
+        position: absolute;
+        top: 200px;
+        left: 0px;
+        background-color: white;
+        font-family: 'GG Light', Arial, sans-serif;
+        font-size: 20px;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+#about-text{
+    position: relative;
+    background-color: white;
+    font-family: 'GG Light', Arial, sans-serif;
+    font-size: 16px;
+    margin: auto;
+    width: 70%;
+    float: center;
+    text-align: center;
+    left: 50;
+}
+
+
+.container{
+    position: absolute;
+    top: 140px;
+    left: 0px;
+    background-color: white;
+    color: #17324f;
+    font-family: 'GG Light', Arial, sans-serif;
+    font-size: 16px;
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .container{
+        position: absolute;
+        top: 210px;
+        left: 0px;
+        background-color: white;
+        color: #17324f;
+        font-family: 'GG Light', Arial, sans-serif;
+        font-size: 20px;
+        margin-top: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.slide img{
+    max-height: 300px;
+    padding: 5px;
+}    
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .slide img{
+        max-height: 300px;
+        padding: 5px;
+    }        
+}
+.table1 img{
+    max-width: 150px;
+    padding: 10px; 
+}        
+
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .table1 img{
+        max-width: 500px;
+        padding: 10px;  
+    }        
+}
+
+.table2 img{
+    max-width: 170px;
+    padding: 8px; 
+}        
+
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .table2 img{
+        max-width: 500px;
+        padding: 10px;  
+    }        
+}
+
+#photos{
+    border-spacing: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    #photos{
+        border-spacing: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }       
+}
+
+#artwork{
+    border-spacing: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    #artwork{
+        border-spacing: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }       
+}
+
+iframe {
+    width: 360px;
+    height: 203px;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    iframe {
+        width: 720px;
+        height: 406px;
+    }     
+}
+
+
+#animation {
+    border-top: 5px solid #27496d;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    #animation {
+        border-top: 15px solid #27496d;
+    }
+}
+
+
+#photography{
+    border-top: 5px solid #27496d;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    #photography {
+        border-top: 15px solid #27496d;
+    }
+}
+
+#art {
+    border-top: 5px solid #27496d;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    #art {
+        border-top: 15px solid #27496d;
+    }
+}
+
+a:link {
+    color: #17324f;
+    font-style: normal;
+    text-decoration: none;
+    
+ }
+
+a:hover {
+    color: #547aa2;
+    
+ }
+
+    menu {
+    position: absolute;
+    right: 0;
+    background-color: white;
+    font-family: 'GG Extralight', Arial, sans-serif;
+    margin-top: 0;
+    height: 3em;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    menu{
+        position: absolute;
+        right: 0;
+        background-color: white;
+        font-family: 'GG Extralight', Arial, sans-serif;
+        font-size: 20px;
+        margin-top: 0;
+        height: 3em;
+        width: 100%;
+        text-align: right;
+        padding: 0;
+    }
+}
+
+.menu-item {
+    display: inline-block;
+    margin: .5em .2em;
+    min-width: 2em;
+    text-align: center;
+    background-color: white;
+    padding: 0.5em 0.5em;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .menu-item {
+        display: inline-block;
+        margin: .5em .1em;
+        min-width: 4em;
+        text-align: center;
+        background-color: white;
+        
+    }
+}
+
+
+.menu-item a {
+    color: #27496d;
+    text-decoration: none;
+    padding: 8px 5px;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .menu-item a {
+        color: #27496d;
+        text-decoration: none;
+        padding: 12px 16px;
+    }
+}
+
+
+.menu-item:hover {
+    color: black;
+    border-radius: 5%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+      }
+
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+      }
+}
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2.8em;
+    background-color: white;
+    min-width: 2em;
+    border-radius: 5%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 12px;
+  }
+
+  
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 3.2em;
+    background-color: white;
+    min-width: 3em;
+    border-radius: 5%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 14.5px;
+  }
+}
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: #27496d;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    display: block;
+  }
+ 
+  /* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: #27496d;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+}
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    border-radius: 10%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+  
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+
+#slideshow {
+    padding-top: 70px;
+    border-spacing: 70px;
+    animation: tableAnim 240s linear 0s infinite normal forwards;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    #slideshow {
+        padding-top: 70px;
+        border-spacing: 70px;
+        animation: tableAnim 240s linear 0s infinite normal forwards;
+    }
+}
+
+
+@keyframes tableAnim {
+    0% {
+        transform: translateX(0);
+      }
+    
+      50% {
+        transform: translateX(-4300px);
+      }
+
+    100% { 
+        transform: translateX(4333)
+    }
+
+
+  }
+
+  .submenu {
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    padding: 0;
+    background-color: white;
+    font-family: 'GG Extralight', Arial, sans-serif;
+    margin-top: 0;
+    height: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .submenu{
+        position: absolute;
+        top: 145px;
+        right: 0px;
+        padding-top: 5px;
+        background-color: white;
+        font-family: 'GG Extralight', Arial, sans-serif;
+        font-size: 20px;
+        margin-top: 0px;
+        height: 60px;
+        width: 100%;
+        text-align: center;
+        
+    }
+}
+
+.submenu-item {
+    display: inline-block;
+    margin: auto;
+    min-width: 3em;
+    text-align: center;
+    background-color: white;
+    padding: 0.5em 1em;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    .submenu-item {
+        display: inline-block;
+        margin: auto;
+        min-width: 4em;
+        text-align: center;
+        background-color: white;
+        padding: 12px 100px;
+    }
+}
+
+
+.submenu-item a {
+    color: #27496d;
+    text-decoration: none;
+}
+
+.submenu-item:hover {
+    color: black;
+    border-radius: 5%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
