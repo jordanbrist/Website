@@ -472,6 +472,21 @@ header {
     }       
 }
 
+#modelphotos{
+    border-spacing: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    #modelphotos{
+        border-spacing: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }       
+}
+
 #artwork{
     border-spacing: 15px;
     margin-left: auto;
@@ -513,7 +528,18 @@ iframe {
 }
 
 
-#photography{
+#models {
+    border-top: 5px solid #27496d;
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+    #models {
+        border-top: 15px solid #27496d;
+    }
+}
+
+#photography {
     border-top: 5px solid #27496d;
 }
 
@@ -778,11 +804,14 @@ a:hover {
 @media only screen and (min-width: 600px) {
     .submenu-item {
         display: inline-block;
-        margin: auto;
-        min-width: 4em;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 60px;
+        
+        min-width: 3em;
         text-align: center;
         background-color: white;
-        padding: 12px 100px;
+        padding: 15px 60px;
     }
 }
 
@@ -797,3 +826,41 @@ a:hover {
     border-radius: 5%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
+
+#card {
+    margin: 3em auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+  }
+  
+  model-viewer {
+    width: 100%;
+    height: 400px;
+    background-color: #70BCD1;
+    --poster-color: #ffffff00;
+  }
+  
+  .attribution {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1em;
+  }
+  
+  .attribution h1 {
+    margin: 0 0 0.25em;
+  }
+  
+  .attribution img {
+    opacity: 0.5;
+    height: 2em;
+  }
+  
+  .attribution .cc {
+    flex-shrink: 0;
+    text-decoration: none;
+  }

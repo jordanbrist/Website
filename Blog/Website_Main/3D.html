@@ -15,6 +15,12 @@
 
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
 
+   <!--<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>--> 
+
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer=""></script>
+    
+
 </head>
 
 <body>
@@ -79,7 +85,7 @@
 
     <menu class="submenu">
         <div class="submenu-item">
-            <a href="3D Models.html">3D Models</a>
+            <a href="3D.html">3D Models</a>
         </div>
         <div class="submenu-item">
             <a href="animation.html">Animation</a>
@@ -89,31 +95,31 @@
         </div>
     </menu>
 
-    <div id="photography" class="container">
+    <div id="models" class="container">
 
-        <table id="photos" style>
-            <tr>
-                <td class="table2"><img src="../3DM/Gameboy/poster.webp"></td>
-                <td class="table2"><img src="../3DM/GameboyCart/poster.webp"></td>
-            </tr>
+        <div id="card">
+            <!-- All you need to put beautiful, interactive 3D content on your site: -->
+            <model-viewer src="../Website_Main/Models/Gameboy.glb"
+                          ios-src="../Website_Main/Models/Gameboy.glb"
+                          poster="../Website_Main/images/posters/GameboyPoster.webp"
+                          alt="A 3D model of a GameBoy Color"
+                          shadow-intensity="1"
+                          camera-controls
+                          auto-rotate ar>
+            </model-viewer>
+            <section class="attribution">
+              <span>
+                <h1>Gameboy Color</h1>
+                <span>Fusion 360</span>
+              </span>
+            </section>
+            
+          </div>
 
+        <table id="modelphotos" style>
             <tr>
-                <td class="table2"><img src="../3DM/MainCharacter/poster.webp"></td>
-                <td class="table2"><img src="../3DM/WaterCooler/poster.webp" ></td>
-            </tr>
-            <tr>
-                <td class="table2"><img src="../3DM/Enemy1/poster.webp"></td>
-                <td class="table2"><img src="../3DM/Enemy2/poster.webp"></td>
-            </tr>
-
-            <tr>
-                <td class="table2"><img src="../3DM/OfficeDesk/poster.webp"></td>
-                <td class="table2"><img src="../3DM/VendingMachine/poster.webp"></td>
+                <td class="table2"></td>
                 
-            </tr>
-            <tr>
-                <td class="table2"><img src="../3DM/Floppy/poster.webp"></td>
-                <td class="table2"><img src="../3DM/Plant/poster.webp"></td>
             </tr>
 
         </table>
@@ -132,6 +138,10 @@
             </div>
             
     </div>
+
+    <script type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
 
 </body>
 
