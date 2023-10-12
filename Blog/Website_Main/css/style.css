@@ -885,3 +885,33 @@ a:hover {
     flex-shrink: 0;
     text-decoration: none;
   }
+
+  .blogEntries {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    background-color: white;
+    box-shadow: 10px 10px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin:  auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .blogEntry {
+    position: relative;
+    background-color: white;
+    box-shadow: -10px 10px 15px 5px;
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin: auto;
+    width: 75%;
+    float: center;
+    text-align: center;
+    left: 50;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
