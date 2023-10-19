@@ -92,6 +92,31 @@
         <!-- Blog entries newest to oldest-->
     <div class="blogEntries">
 
+      
+
+       <!-- Blog entry -->
+       <div class="blogEntry">
+        <br>
+      <div class="entryTitle">
+        <h3>FPS Testing</h3>
+        <h5>10-18-2023</span></h5>
+      </div>
+
+      <div class="entryContent">
+        <iframe src="https://player.vimeo.com/video/875814644?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="fullscreen;" title="Render and Compositing Test 01"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+        <br>
+        <p>I have spent the last couple of days trying out some different options for frame-rate. I started with 24 FPS and, of course, it looks too smooth. I then tried interpolating the position of each keyframe by two steps to make it choppier, but in actuallity it just ended up looking jittery.
+          However, I did like the look of the animation moving at a different rate than the camera, which was still moving at 24 FPS. I tried scaling down the keyframes of the animation and then scaling them back up, which helped reduce the keyframe count, but the animation is still interpolating 
+          the positions of the rig on each frame which creates a smoothing effect. This current video is of a render in which I changed the render settings to animate everything at 12 FPS. I am currently rendering another pass of this test animation in which I change the frame interpolation to "stepped" 
+          only for the character so that it looks as though it is moving at a slower rate than the camera, but I made sure this time to keep the object motion as a linear path so that it won't move jerk forward on every second frame. This could mean that the animation will be moving slower than the 
+          movement of the character which would make things look strange/uncanny. If that ends up being the case then I will have to try it again and just increase the number of loops in the animation keyframes to match. 
+        </p>
+        <br>
+        <br>
+        </div>
+      </div>
+    <br>
+
           <!-- Blog entry -->
           <div class="blogEntry">
             <br>
@@ -225,6 +250,9 @@
             <br>
             <p>This is the first iteration of the storyboard for this currently untitled animated work. 
                 It is a rough guideline for me to use to keep track of camera angles, shot composition, movement, and also to give me an idea of what I will need to make models for.</p>
+              <p>
+                After I made this I went ahead and wrote out a quick (9 page) short story in my journal that follows the beats of the storyboard and expands upon them to give me a greater idea of the emotions of the characters and details of the environment.
+              </p>
             <br>
             <br>
             </div>
