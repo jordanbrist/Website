@@ -89,8 +89,376 @@
 
     <div id="animation" class="container">
 
-            <!-- Blog entries newest to oldest-->
+    <!-- Blog entries newest to oldest-->
     <div class="blogEntries">
+
+        <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 4 - 1: Using the Pose Editor in Skinning</h3>
+            <h5>11-22-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">  
+            <video width="50%" controls>
+                <source src="../Blog/images/blog/2_10.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+            <p></p>
+            <p>
+                In this exercise, the pose editor was used to make a bicep "flex" and look less deformed when in a bent position. 
+                Essentially, the geometry is edited during one frame and the pose editor allows the object to morph between the two instances as it approaches that keyframe. 
+                So, when the arm is straight it is normal and when bent it has the large gaps filled. 
+                Using the pose editor, it is possible to change the geometry of an object in frames where it is necessary. 
+                By using the pose editor rather than adjusting the geometry on the fly, it is then possible to return the geometry to its original shape when not in a specific pose.
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+        <br>
+
+        <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 3 - 4: Matrices Instead of Constraint in Rigs</h3>
+            <h5>11-14-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">  
+            <video width="50%" controls>
+                <source src="../Blog/images/blog/2_9.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+            <p></p>
+            <p>
+                This exercise focused on using the Offset Parent Matrices from earlier in the course, this time in conjunction with a node in the Node Editor called pickMatrix. 
+                By running the matrix through a pickMatrix node, it allows for the separation of object transformation from the matrix. 
+                For instance, the Offset Parent Matrix lets the surfboard's translation, rotation, and scale alter that of the character that is being parented. 
+                By using the pickMatrix node and then deselecting "Use Scale" the surfboard can be scaled independently of the character. 
+                Another topic discussed in this video was the use of constraints which, in prior versions of Maya, was a more common way of parenting an object to another. 
+                By using a parent constraint, the transformation nodes of the child are unable to be edited as they are being controlled by the parent. 
+                However, using matrices, this is no longer an issue. The character can move completely independently from the parented surfboard without altering the surfboard or the matrix.
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+        <br>
+
+        <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 3 - 3: Rigs for Dilating Pupils</h3>
+            <h5>11-14-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">  
+            <video width="50%" controls>
+                <source src="../Blog/images/blog/2_8.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+            <p></p>
+            <p>
+                The focus on this exercise was using driven keys and blend shapes to dilate the pupil of an eyeball. 
+                Using a slider with driven keys causing the Y translation of the slider to blend the geometry as it moves from -1 to 1. 
+                At -1, the geometry is set to the narrow eye model, at 0 it is the regular eye model, and at 1 it becomes the dilated eye model. 
+                The blend shape allows the geometry to shift seemlessly between sizes and the driven keys make the change happen based on the location of the slider.
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+        <br>
+
+         <!-- Blog entry -->
+         <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 3 - 2: Eye Direction and Head Turns</h3>
+            <h5>11-14-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">  
+            <video width="50%" controls>
+                <source src="../Blog/images/blog/2_7.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+            <p></p>
+            <p>
+                This exercise focused on the way eyes move when a character is turning their head. 
+                When a person turns their head to look at something, their eyes will move slightly before the head. 
+                Following the previous exercise, the change in eye direction was combined with a blinking animation. 
+                When a character's head moves from side to side, it is also more lively/dynamic to add a sense of weight to the movement and the body by dipping the head down slightly during the arc of the head movement.
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+        <br>
+
+        <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 3 - 1: Changing Eye Direction</h3>
+            <h5>11-14-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">  
+            <video width="50%" controls>
+                <source src="../Blog/images/blog/2_6.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+            <p></p>
+            <p>
+                In this exercise, we learned about the nuances of changing a characters eye direction. 
+                Along with moving the eyes, subtle head movements and blinks are necessary to keep the character from feeling static or conveying an unintended emotion. 
+                Using the information from the previous exercise "Animating Blinks" I decided to take it one step further and also animate movement of the eyebrows.
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+        <br>
+
+        <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 2 - 5: Animating Blinks</h3>
+            <h5>11-9-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">  
+            <video width="50%" controls>
+                <source src="../Blog/images/blog/2_5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+            <p></p>
+            <p>
+                In this exercise we learned about animating blinks (of course). 
+                The instructor went over the details of blinking in animation and how it is used with movement, mood, and making a character feel like a living being. 
+                Blinking alone is not enough to make a character look "alive". 
+                For this exercise, the head and eyebrows were moved in conjunction with the blinking animation, which makes the character look less like a terrifying doll.
+            </p>
+            <p>
+                For the sequence of 3 blinks, the first includes the movement of the head and eyebrows while the second and third are merely the movement of the eyelids.
+                Seeing the two types of blink side-by-side really shows how the subtle movements create a more dynamic animation in contrast to the eyelids just moving up and down.
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+        <br>
+
+        <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 2 - 4: Rivet Command</h3>
+            <h5>11-9-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">  
+            <p>
+                By constraining an object to another using the rivet command, you can add an object to a scene that is already animated with a very short process. 
+                In the exercise, we riveted a hat model to a point on the mesh of a character that is walking and jumping. 
+                The hat stays in place with the geometry without deforming.
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+        <br>
+
+        <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 2 - 3: Proximity Wrapping</h3>
+            <h5>11-9-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">  
+            <video width="50%" controls>
+                <source src="../Blog/images/blog/2_3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+            <p></p>
+            <p>
+                Proximity wrapping is used when conforming a mesh to another. 
+                In this exercise, we used a low resolution arm mesh with animation attached to it and proximity wrapped a higher resolution mesh (and a bracelet) to it. 
+                By doing this, one can animate a lower resolution mesh and cut down on processing power due to the reduced number of vertices. 
+                Then, when nearing the end of the project, a more detailed and high resolution mesh can be proximity wrapped and be used for the final render.
+		    </p>
+            <br>
+            <br>
+            </div>
+          </div>
+        <br>
+
+        <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 2 - 2: UV Pins</h3>
+            <h5>11-9-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">  
+            <video width="50%" controls>
+                <source src="../Blog/images/blog/2_2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+            <p></p>
+            <p>
+            Using UV pins is similar to Proximity Pins except that it uses the UV coordinates of a deformed surface.
+		    </p>
+            <br>
+            <br>
+            </div>
+          </div>
+        <br>
+
+
+         <!-- Blog entry -->
+         <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 2 - 1: Proximity Pins</h3>
+            <h5>11-9-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">  
+            <p>
+            Using proximity pins is one way to parent an object to a deformable mesh so that it can move along with the deformed surface. In this exercise, we pinned a 
+		    soul patch to a character's chin so that it would move with the chin as the mouth and chin were deformed.
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+        <br>
+
+        <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 1 - 4: Animation Timeline Bookmarks</h3>
+            <h5>11-1-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">  
+            <p>
+            By setting bookmarks for portions of animations along the animation timeline, it becomes easier to find animated movements for duplication and editing.
+            You can also zoom in on a specific bookmark to see only the transformations taking place in that portion of the timeline. This is great for organization
+            and saving time later on when animating in chunks. 
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+        <br>
+
+         <!-- Blog entry -->
+         <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 1 - 2: Offset Parent Matrices</h3>
+            <h3>Section 1 - 3: Scripting Offset Parent Matrices</h3>
+            <h5>11-1-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">  
+            <p></p>
+            <img class="zoom" src="../Blog/images/blog/Script Editor.jpg" alt="Script Editor" style="width:50%">   
+            <br>
+            <p>
+            Using Offset Parent Matrices, you can change the position and orientation of an object without affecting its original location in space. 
+		    This allows things to be animated more efficiently.
+            </p>
+            <p>
+		    Using the Script Editor in combination with the Node Editor, we created a simple script that automates a portion of the Offset Parent Matrices workflow for
+		    quick and repeatable use.
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+        <br>
+
+         <!-- Blog entry -->
+         <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 1 - 1: Object Swapping</h3>
+            <h5>11-1-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">  
+            <video width="50%" controls>
+                <source src="../Blog/images/blog/1_1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+            <p></p>
+            <img class="zoom" src="../Blog/images/blog/Visibility Nodes - Mouth Replacement.jpg" alt="Visibility Nodes" style="width:50%">   
+            <br>
+            <p>
+		        Using the Node Editor, we created a node structure that parented the visibility of each mouth asset to a specific point of movement along the X-axis
+		        of a sliding piece of geometry. This effect is great for animating stop-motion mouths. 
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+        <br>
+
+        <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Pre-Update-Update</h3>
+            <h5>11-1-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">
+            <p>
+              One thing that I wish I had done during the intro course was take some screen-recordings of the progress. I have notes but they feel kind of boring on their own. 
+            So, for this course I have been taking screenshots and recordings of the end-product for each exercise.</p>
+            <p>
+                Having said that, the following entries will be quick breakdowns of each exercise along with a recording or screenshot of the work.
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+        <br>
+        
+        <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Animation and Rigging</h3>
+            <h5>10-30-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">
+            <p>
+                I finally started the 3D Animation and Rigging course. It is split up into small sections like the previous course but it feels like a much more enjoyable experience
+                so far. There were some elements of Maya that I found hard to acclimate to but with these smaller, more focused examples the content seems easier to grasp. 
+                I do think that I would be having trouble had I not started with the Intro and learned the basics of the software prior to this. One last thing: 
+                I enjoy 3D modeling but, for some reason, doing it in Maya feels like a chore, perhaps that is because it is mainly what I have been doing in Blender for my studio project. 
+                Either way, doing the actual animation work and just forgetting about the modeling feels kind of relaxing.
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+        <br>
 
 
         <!-- Blog entry -->
@@ -102,8 +470,8 @@
         </div>
   
         <div class="entryContent">
-            <img src="../Blog/images/blog/MayaRender1.jpg" alt="Car Render Front" style="width:50%">      
-            <img src="../Blog/images/blog/MayaRender2.jpg" alt="Car Render Back" style="width:50%">
+            <img class="zoom" src="../Blog/images/blog/MayaRender1.jpg" alt="Car Render Front" style="width:50%">      
+            <img class="zoom" src="../Blog/images/blog/MayaRender2.jpg" alt="Car Render Back" style="width:50%">
           <br>
           <p>
             I decided to use this week as a review week. I started fresh in a new scene and modeled this car after I saw a picture of a similar one that someone made in Blender. I used many techniques from the 2024 Essential Training course and tried to spend more time getting familiar with the materials and the different settings for them.
@@ -127,7 +495,7 @@
         </div>
   
         <div class="entryContent">
-            <img src="../Blog/images/blog/certificate.jpg" alt="certificate" style="width:50%">
+            <img class="zoom" src="../Blog/images/blog/certificate.jpg" alt="certificate" style="width:50%">
           <br>
             <p>Tonight I finished the Maya 2024 Essential Training course on LinkedIn Learning. It was a very good introduction to Maya and I definitely feel more comfortable using the software than before. The course consisted of 11 chapters and touched on the majority of the basic tools, menus, and techniques
              for modeling and making simple animations.

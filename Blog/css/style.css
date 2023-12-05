@@ -420,14 +420,15 @@ header {
 }
 
 .slide img{
-    max-height: 300px;
+    max-height: 25vh;
     padding: 5px;
+
 }    
 
 /* For width 600px and larger: */
 @media only screen and (min-width: 600px) {
     .slide img{
-        max-height: 300px;
+        max-height: 25vh;
         padding: 5px;
     }        
 }
@@ -917,5 +918,10 @@ a:hover {
     padding-right: 25px;
   }
 
-
-
+  .zoom {
+    transition: transform .2s; /* Animation */
+  }
+  
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
