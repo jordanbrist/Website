@@ -96,6 +96,53 @@
         <div class="blogEntry">
             <br>
           <div class="entryTitle">
+            <h3>Section 4 - 3: Picking Up Objects</h3>
+            <h5>11-22-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">  
+            <video width="50%" controls>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+            <p></p>
+            <p>
+                In this exercise, we took an animation of a character moving his hand to a cup and bringing it up to his mouth and made the geometry of the cup follow his hand as he picked it up using parent constraints. 
+                By constraing the object at the frame in which it is picked up and then changing the value to zero on the keyframe before, the object will stay in place and then move with the parent once it reaches the desired frame. 
+                Another way of accomplishing this is to create a copy of the object, parent it to the character, and toggle the visibility of both objects on the frame where it is interacted with. 
+                The static object is visible until it reaches the interaction frame, and then the parented object becomes visible. 
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+        <br>
+
+         <!-- Blog entry -->
+         <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 4 - 2: Scaling Rigs</h3>
+            <h5>11-22-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">   
+            <p>
+                In order to scale all of the contents of a rig without deformation of the geometry, skeleton, etc; 
+                The best way is to create something simple such as a nurbs circle and then parenting all of the necessary contents (except for the geometry) to it. 
+                If the geometry is also added then it will not scale at the same rate as the skeleton. 
+                Now, when scaling or moving the nurbs circle, it will also affect all of the parented objects.
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+        <br>
+
+        <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
             <h3>Section 4 - 1: Using the Pose Editor in Skinning</h3>
             <h5>11-22-2023</span></h5>
           </div>
