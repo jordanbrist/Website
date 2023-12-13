@@ -530,26 +530,26 @@ header {
 .gallery{
     display: grid;
     width: 75%;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
 }
 
-/* For width 600px and larger: */
-@media only screen and (min-width: 900px) {
-    .gallery{
-        display: grid;
-        width: 75%;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px;
-    }     
-}
-
-/* For width 600px and larger: */
-@media only screen and (min-width: 900px) {
+/* For width less than 950: */
+@media only screen and (max-width: 950px) {
     .gallery{
         display: grid;
         width: 75%;
         grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }     
+}
+
+/* For width 600px and smaller: */
+@media only screen and (max-width: 600px) {
+    .gallery{
+        display: grid;
+        width: 75%;
+        grid-template-columns: repeat(1, 1fr);
         grid-gap: 10px;
     }     
 }
