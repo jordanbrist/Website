@@ -1,4 +1,4 @@
-const images = document.querySelectorAll(".gallery__item img");
+const images = document.querySelectorAll(".gallery_item img");
 let imgIndex
 let imgSrc;
 // get images src onclick
