@@ -22,7 +22,16 @@
       padding: 0px;
       overflow-x: hidden; 
   }
- 
+ main {
+    position: fixed;
+    top: 350px;
+ }
+ @media only screen and (min-width: 600px) {
+    main {
+        position: fixed;
+        top: 480px;
+    }
+}
   #recent {
     position: absolute;
     color: #27496d;   
@@ -118,7 +127,7 @@ header {
     background: linear-gradient(0deg, #547aa2, #547aa2 33.33%, #27496d 33.33%, #27496d 66.66%, #17324f 66.66%);
     font-family: 'GG Light', Arial, sans-serif;
     text-align: center; 
-    height: 250px;
+    height: 30vh;
     width: 100%;
 }
 
@@ -420,7 +429,7 @@ header {
 }
 
 .slide img{
-    max-height: 25vh;
+    max-height: 50vh;
     padding: 5px;
 
 }    
@@ -428,7 +437,7 @@ header {
 /* For width 600px and larger: */
 @media only screen and (min-width: 700px) {
     .slide img{
-        max-height: 30vh;
+        max-height: 50vh;
         padding: 5px;
     }        
 }
@@ -892,7 +901,7 @@ a:hover {
   
 
 #slideshow {
-    padding-top: 70px;
+    padding-bottom: 70px;
     border-spacing: 70px;
     animation: tableAnim 240s linear 0s infinite normal forwards;
 }
@@ -900,7 +909,8 @@ a:hover {
 /* For width 600px and larger: */
 @media only screen and (min-width: 600px) {
     #slideshow {
-        padding-top: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
         border-spacing: 70px;
         animation: tableAnim 240s linear 0s infinite normal forwards;
     }
@@ -935,7 +945,7 @@ a:hover {
     width: 100%;
     text-align: center;
     display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 /* For width 600px and larger: */
@@ -954,7 +964,7 @@ a:hover {
         width: 100%;
         text-align: center;
         display: inline-grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         
     }
 }
