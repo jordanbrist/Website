@@ -131,6 +131,19 @@ header {
     width: 100%;
 }
 
+/* For width 600px and larger: */
+@media only screen and (min-height: 800px) {
+    header {
+        position: fixed;
+        top: 65px;
+        left: 0px;
+        background: linear-gradient(180deg, #547aa2, #547aa2 33.33%, #27496d 33.33%, #27496d 66.66%, #17324f 66.66%);
+        font-family: 'GG Light', Arial, sans-serif;
+        text-align: center; 
+        height: 400px;
+        width: 100%;
+    }
+}
 
 /* For width 600px and larger: */
 @media only screen and (min-width: 600px) {
@@ -145,6 +158,8 @@ header {
         width: 100%;
     }
 }
+
+
 
 .header2 {
     position: absolute;
@@ -429,13 +444,13 @@ header {
 }
 
 .slide img{
-    max-height: 50vh;
+    max-height: 30vh;
     padding: 5px;
 
 }    
 
 /* For width 600px and larger: */
-@media only screen and (min-width: 700px) {
+@media only screen and (min-height: 800px) {
     .slide img{
         max-height: 50vh;
         padding: 5px;
@@ -902,12 +917,13 @@ a:hover {
 
 #slideshow {
     padding-bottom: 70px;
-    border-spacing: 70px;
+    border-spacing: 30px;
     animation: tableAnim 240s linear 0s infinite normal forwards;
+    height: 35vh;
 }
 
-/* For width 600px and larger: */
-@media only screen and (min-width: 600px) {
+/* For 800px tall and larger: */
+@media only screen and (min-height: 800px){
     #slideshow {
         margin-top: auto;
         margin-bottom: auto;
@@ -915,6 +931,16 @@ a:hover {
         animation: tableAnim 240s linear 0s infinite normal forwards;
     }
 }
+
+/* For width 600px and larger: 
+@media only screen and (min-width: 600px) {
+    #slideshow {
+        margin-top: auto;
+        margin-bottom: auto;
+        border-spacing: 70px;
+        animation: tableAnim 240s linear 0s infinite normal forwards;
+    }
+} */
 
 
 @keyframes tableAnim {
