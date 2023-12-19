@@ -100,17 +100,186 @@
     <!-- Blog entries newest to oldest-->
     <div class="blogEntries">
 
-         <!-- Blog entry -->
-         <div class="blogEntry">
+      <!-- Blog entry -->
+        <div class="blogEntry">
             <br>
           <div class="entryTitle">
-            <h3>Wrap Up</h3>
-            <h5>12-4-2023</span></h5>
+            <h3>Section 6 - 2: Walk Cycle to Progressive Animation</h3>
+            <h5>11-27-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">
+            <video width="50%" controls>
+              <source src="images/blog/6_2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>       
+            <p>
+              For this exercise, we started with a robot with a walk animation. The animation is composed of a single step with each foot. 
+              From there, we went into the animation graph editor and created a walk cycle by cycling the animation to infinity. 
+              Following this, we added the animation to an animation layer and then, on a separate layer, animated a translation on the Z axis for the moving components. 
+              To make the movement follow the proper speed of the walk cycle, we did something that I had never previously been taught or learned anywhere. 
+              It's this: look at the start position of one foot and then use the distance from that to the end position. 
+              After that, double it (one for each leg) and that is the proper value to add to each component to make it move at a constant rate that matches the animation. 
+              It is extremely simple, yet somehow never occured to me. I usually just try and eyeball it until it looks right so from now on I will be using this as a guideline for walk cycles. 
+              Ok, tangent aside, the movement was still kind of "slide-y" and the way to fix this is pretty common in all animation (I even use it for blender), in the graph editor, I just had to select the Z translation for each component and change the interpolation to linear. 
+              This removes any smoothing between frames and makes things move as they are meant to. Then it was just a matter of cycling the movement with the walk cycle and PRESTO! it moves.</p>
+            <p>
+              One little aspect of this lesson that I found super helpful was learning how to use a function to add the same integer to each item's position without screwing everything up or having to do any math. 
+              For example, if we are translating each piece of the robot by 11 for each cycle of 25 frames, we can just select all of the geometry and type (in the specific value in the channel box) +=11 and it will add 11 to each of the existing integers that correspond with that item. </p>
+            <br>
+            <br>
+            </div>
+          </div>
+          <br>
+
+      <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 6 - 1: Understanding Animation Layers</h3>
+            <h5>11-27-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">
+            <video width="50%" controls>
+              <source src="images/blog/6_1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video> 
+          <video width="50%" controls>
+            <source src="images/blog/6_1_2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>      
+            <p>
+              First, I must say this: animation layers are amazing. In this exercise, we looked at how animation layers work and how to add to them in order to animate different parts of an animation on separate layers. 
+              This is something that is EXTREMELY useful when working with all of the subtle changes in character animation. Specifically, for this animation, we started with a character sitting in a pool that is looking around. Aside from the head turn and facial animation, the body of the character was static. 
+              From there, we added the selected animation to a new animation layer, locked it, and created a new layer. In the new animation layer we added a light bobbing motion to make the character look like it is floating in the water. 
+              Then, we added the foot IK controllers to that same animation layer and animated the feet movement both up and down and out to the sides to make his feet look like they are dangling in the water. 
+            </p>
+            <p>
+              I decided to take this one step further and add some animation to the characters arms. Rather than keeping them at his sides, I figured he looked more like a character that would have them extended above the water (kind of like a child) His arms were a bit high, so I lowered him further into the water and added some subtle rotation to his shoulders to keep his arms mostly above the water as he bobs up and down.
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+          <br>
+
+      <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 5 - 6: Skinning Ribbon Rigs</h3>
+            <h5>11-25-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">
+            <video width="50%" controls>
+              <source src="images/blog/5_6.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video> 
+          <video width="50%" controls>
+            <source src="images/blog/5_6_2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>      
+            <p>
+              This was a quick wrap-up on ribbon rigs. We just used Bind Skin to constrain the geometry to the the ribbon rig. 
+              Now, the movement and rotaion of the rig and joints will also deform the skin of the model as well.
+            </p>
+            <p>
+              Prior to this, I had never had any experience with ribbon rigs. Now I think I have a little bit better understanding of what they do and how to make them in Maya.
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+          <br>
+
+      <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 5 - 5: Adding Deformers to a Ribbon Rig</h3>
+            <h5>11-25-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">   
+            <video width="50%" controls>
+              <source src="images/blog/5_5.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>  
+            <p>
+              To start, a quick adjustment was made to the ribbon plane to make the elbow bend in a smoother way. 
+              To do this, all it took was adding two isoparms to either side of the segment in the middle of the elbow joint. 
+              Now it has a more gradual bend towards the center of the elbow. Following that, we duplicated the ribbon plane and added a blendshape modifier to them. 
+              Then, to the blendshape, we added a twist deformer to the geometry. Then, in the node editor, the x-axis rotation of the wrist IK was connected to the start of the twist. 
+              Now, when the IK handle is rotated, it deforms the ribbon rig and twists it with the rotation of the wrist.
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+          <br>
+
+
+      <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 5 - 4: Rigging a Flexible Arm with Ribbons</h3>
+            <h5>11-25-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">
+            <video width="50%" controls>
+              <source src="images/blog/5_4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>     
+            <p>
+              Created more joints (5 of them) and lined them up using the joint nodes from last exercise. Now there is a joint for the shoulder, bicep, elbow, forearm, and wrist. From there, we used Bonus Tools to create a circle control. 
+              Once that was all finished, the new joints were parented to the joints on the existing skeleton. 
+              Some were just regular parent constraints while the bicep and forearm were point constraints with a second aim constraint that makes them keep the same orientation as the joint above them. 
+              This makes it so the bicep orientation will follow the shoulder and the forearm follows the elbow. Now, the ribbon moves and flexes with the movement of the skeleton. 
+              This should then make it easier to move the geometry on top of it. But I haven't gotten that far yet so I'm not quite sure.
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+          <br>
+
+      <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 5 - 3: Setting Up a Ribbon Rig</h3>
+            <h5>11-25-2023</span></h5>
+          </div>
+    
+          <div class="entryContent">
+            <video width="50%" controls>
+              <source src="images/blog/5_3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>  
+            <p>
+              Created a nurbs plane, added segments, added hair folicles, deleted hair, placed joints in the location of the folicles. Now the joints are parented to the segments on the ribbon plane.
+            </p>
+            <br>
+            <br>
+            </div>
+          </div>
+          <br>
+
+       <!-- Blog entry -->
+        <div class="blogEntry">
+            <br>
+          <div class="entryTitle">
+            <h3>Section 5 - 2: Bonus Tools</h3>
+            <h5>11-25-2023</span></h5>
           </div>
     
           <div class="entryContent">   
             <p>
-                <img class="zoom" src="../Blog/images/blog/certificate 2.jpg" alt="2nd Certificate" style="width:50%">   
+                Notes go here...
             </p>
             <br>
             <br>
@@ -123,7 +292,7 @@
             <br>
           <div class="entryTitle">
             <h3>Section 5 - 1: Advanced Snapping for Joint Placement</h3>
-            <h5>11-27-2023</span></h5>
+            <h5>11-25-2023</span></h5>
           </div>
     
           <div class="entryContent">   
@@ -145,10 +314,6 @@
           </div>
     
           <div class="entryContent">  
-            <video width="50%" controls>
-                <source src="" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>  
             <p></p>
             <p>
                 In this exercise, we took an animation of a character moving his hand to a cup and bringing it up to his mouth and made the geometry of the cup follow his hand as he picked it up using parent constraints. 
