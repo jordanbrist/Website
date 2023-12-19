@@ -3,788 +3,1692 @@
 
 <head>
 
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-    <meta name="description" content="Practicum">
+  <meta name="description" content="Practicum">
 
-    <meta name="author" content="Jordan Brist">
+  <meta name="author" content="Jordan Brist">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Blog: Practicum</title>
+  <title>Blog: Practicum</title>
 
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
 
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 
 </head>
 
 <body>
 
-    <menu class="">
-        <div class="menu-item dropdown">
-            <a href="Blog_Studio.html">Blog</a>
+  <menu class="">
+    <div class="menu-item dropdown">
+      <a href="Blog_Studio.html">Blog</a>
 
-            <div class="dropdown-content">
+      <div class="dropdown-content">
 
-                <div class="dropdown-item">
-                    <a href="Blog_Studio.html">Grad Studio</a>
-                </div>
-                <div class="dropdown-item">
-                    <a href="Blog_Practicum.html">Practicum</a>
-                </div>
-
-            </div>
+        <div class="dropdown-item">
+          <a href="Blog_Studio.html">Grad Studio</a>
+        </div>
+        <div class="dropdown-item">
+          <a href="Blog_Practicum.html">Practicum</a>
         </div>
 
-        <div class="menu-item dropdown">
-            <a href="animation.html">Portfolio</a>
+      </div>
+    </div>
 
-            <div class="dropdown-content">
+    <div class="menu-item dropdown">
+      <a href="animation.html">Portfolio</a>
 
-                <div class="dropdown-item">
-                    <a href="3D.html">3D Models</a>
-                </div>
-                <div class="dropdown-item">
-                    <a href="animation.html">Animation</a>
-                </div>
-                <div class="dropdown-item">
-                  <a href="artwork.html">Artwork</a>
-              </div>
-              <div class="dropdown-item">
-                  <a href="photography.html">Photos</a>
-              </div>
-              <div class="dropdown-item">
-                  <a href="gradschool.html">Grad School</a>
-              </div>
+      <div class="dropdown-content">
 
-            </div>
+        <div class="dropdown-item">
+          <a href="3D.html">3D Models</a>
+        </div>
+        <div class="dropdown-item">
+          <a href="animation.html">Animation</a>
+        </div>
+        <div class="dropdown-item">
+          <a href="artwork.html">Artwork</a>
+        </div>
+        <div class="dropdown-item">
+          <a href="photography.html">Photos</a>
+        </div>
+        <div class="dropdown-item">
+          <a href="gradschool.html">Grad School</a>
         </div>
 
-        <div class="menu-item">
-            <a href="about.html">About</a>
-        </div>
+      </div>
+    </div>
 
-        <div class="menu-item">
-            <a href="contact.html">Contact</a>
-        </div>
+    <div class="menu-item">
+      <a href="about.html">About</a>
+    </div>
 
-        <a href="index.html">
-            <div class="logo2">
-                <img alt="logo">
-            </div>
-        </a>
+    <div class="menu-item">
+      <a href="contact.html">Contact</a>
+    </div>
 
-    </menu>
+    <a href="index.html">
+      <div class="logo2">
+        <img alt="logo">
+      </div>
+    </a>
+
+  </menu>
 
 
 
-    <header class="header2">
-        <div class="headerText2">
-            Blog
-        </div>
-    </header>
+  <header class="header2">
+    <div class="headerText2">
+      Blog
+    </div>
+  </header>
 
-    <menu class="submenu2">
-        <div class="submenu-item">
-            <a href="Blog_Studio.html">Grad Studio</a>
-        </div>
-        
-        <div class="submenu-item">
-            <a href="Blog_Practicum.html">Practicum</a>
-        </div>
-    </menu>
+  <menu class="submenu2">
+    <div class="submenu-item">
+      <a href="Blog_Studio.html">Grad Studio</a>
+    </div>
 
-    <div id="animation" class="container">
+    <div class="submenu-item">
+      <a href="Blog_Practicum.html">Practicum</a>
+    </div>
+  </menu>
+
+  <div id="animation" class="container">
 
     <!-- Blog entries newest to oldest-->
     <div class="blogEntries">
 
       <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 6 - 2: Walk Cycle to Progressive Animation</h3>
-            <h5>11-27-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">
-            <video width="50%" controls>
-              <source src="images/blog/6_2.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>       
-            <p>
-              For this exercise, we started with a robot with a walk animation. The animation is composed of a single step with each foot. 
-              From there, we went into the animation graph editor and created a walk cycle by cycling the animation to infinity. 
-              Following this, we added the animation to an animation layer and then, on a separate layer, animated a translation on the Z axis for the moving components. 
-              To make the movement follow the proper speed of the walk cycle, we did something that I had never previously been taught or learned anywhere. 
-              It's this: look at the start position of one foot and then use the distance from that to the end position. 
-              After that, double it (one for each leg) and that is the proper value to add to each component to make it move at a constant rate that matches the animation. 
-              It is extremely simple, yet somehow never occured to me. I usually just try and eyeball it until it looks right so from now on I will be using this as a guideline for walk cycles. 
-              Ok, tangent aside, the movement was still kind of "slide-y" and the way to fix this is pretty common in all animation (I even use it for blender), in the graph editor, I just had to select the Z translation for each component and change the interpolation to linear. 
-              This removes any smoothing between frames and makes things move as they are meant to. Then it was just a matter of cycling the movement with the walk cycle and PRESTO! it moves.</p>
-            <p>
-              One little aspect of this lesson that I found super helpful was learning how to use a function to add the same integer to each item's position without screwing everything up or having to do any math. 
-              For example, if we are translating each piece of the robot by 11 for each cycle of 25 frames, we can just select all of the geometry and type (in the specific value in the channel box) +=11 and it will add 11 to each of the existing integers that correspond with that item. </p>
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>3D Rigging and Animation: Wrap-Up</h3>
+          <h5>12-05-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <img class="zoom" src="../Blog/images/blog/certificate 2.jpg" alt="Course Certificate" style="width:50%">
+          <p>
+            I read some people's opinions online regarding using Linkedin Learning courses to learn new things and I
+            found a pretty great analogy that I thought I should share. I am paraphrasing a bit due to the comment being
+            poorly structured but it was basically this: "LinkedIn Learning isn't great for everything and many courses
+            can be extremely un-rewarding or even unsatisfactory for learning a subject. When in-depth knowledge is
+            needed, LinkedIn Learning has the attention span of a TikTok; it is so short and high level that someone new
+            to the subject might get something out of it but it won't prep you for real life scenarios." 
             <br>
             <br>
-            </div>
-          </div>
+            I think
+            that I would have to agree with this as a whole. However, as someone that gets easily distracted, these shorter
+            bites of content feel easier to digest and also allow me to take more time on the individual tools that I
+            would normally gloss over. Then, after each topic, I sit and write down what I learned so that I can better
+            retain that information for later use. Basically, I can take each of these less than 10 minute videos and
+            turn it into an experience that spans almost 30 minutes or longer.
+          </p>
           <br>
+          <br>
+        </div>
+      </div>
+      <br>
 
       <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 6 - 1: Understanding Animation Layers</h3>
-            <h5>11-27-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">
-            <video width="50%" controls>
-              <source src="images/blog/6_1.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video> 
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 12 - 6: Using Quick Rig</h3>
+          <h5>12-04-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/12_6.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Quick Rig is a simple tool that allows you to create a skinned and controllable rig in a super short amount
+            of time. It still has some areas that need to be refined but the whole process takes less time than even
+            automated programs built purely for this task like AccuRig or Mixamo. I am blown away by this tool and yet
+            again see another reason to make the switch to Maya for rigging and animation of characters.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 12 - 5: Basic Hair Sweep Mesh</h3>
+          <h5>12-04-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <img class="zoom" src="../Blog/images/blog/12_5.jpg" alt="Keeping Characters Centered" style="width:50%">
+          <p>
+            By creating a line of points snapped to the surface of the geometry of this head, we created a sweep mesh
+            that is often used in the creation of stylized hair geometry. There are many different attributes that can
+            be modified to create a specific look. This seems like a great and simple way to make stylized hair for a
+            character model. It only takes a few clicks to set up a single strand and can be repeated over the entire
+            scalp.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 12 - 4: Keeping Characters Centered</h3>
+          <h5>12-04-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/12_4_1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <img class="zoom" src="../Blog/images/blog/12_4_2.jpg" alt="Keeping Characters Centered" style="width:50%">
+          <p>
+            Using both constraints and the node editor, we parented the body controller to a point that is always
+            equidistant from the two feet of the character. This allows the feet to be moved without distorting the
+            geometry of the character.</p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 12 - 3: Connecting Maya Muscles to Skin</h3>
+          <h5>12-04-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/12_3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Continuing from the previous exercise, we took our muscle and made it deform the skin as it moves, grows,
+            jiggles, etc. To do this, essentially all that needs to be done is some weight painting on the skin surface.
+            Then it moves along with the movement of the muscle underneath. It feels like it should be more complex, but
+            I also realize that this is the work of only a single muscle instead of a fully finished muscle structure.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 12 - 2: Maya Muscle System Setup</h3>
+          <h5>12-04-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/12_2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Maya's Muscle System is something that I am very excited to learn more about. In this exercise we simply
+            used a pre-skinned arm skeleton and added a bicep to the rig. Then we set up the position, scale, and other
+            things like jiggle. This seems like a very long and complex process for an entire body, but I'm sure it is
+            worth it once it is all done
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 12 - 1: Spring IK Solvers</h3>
+          <h5>12-04-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/12_1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            By enabling the Sprink Solver IK attribute, you can access a different way of moving object chains with IK.
+            The green joints are using a standard IK solver and they lift off the ground and shrink in a way that may
+            not always be right for every situation. With the Spring Solver, the blue joints move in a more even and
+            predicatable manner, like a spring. This seems like it will be very useful for more mechanical purposes
+            where a standard IK is more fitting for organic movement.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 11 - 7: Component Editor Tips</h3>
+          <h5>12-01-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <img class="zoom" src="../Blog/images/blog/11_7.jpg" alt="Component Editor" style="width:50%">
+          <p>
+            I don't think that the Component Editor is something that I want to use because it looks so daunting and
+            complex. It is basically a table of values that belong to individual selected vertexes. I'm sure that it can
+            be a useful tool to know and use but my brain is about to explode looking at even this small table of
+            vertices.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 11 - 6: Ghosting Editor</h3>
+          <h5>12-01-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/11_6.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            The Ghosting Editor is essentially just an onion-skinning tool. Nothing too wild or fancy about it but, it
+            is pretty useful and good to know about.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 11 - 5: Solidify Deformer</h3>
+          <h5>12-01-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/11_5.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            The Solidify Deformer keeps geometry from being stretched or deformed. In this example, this character has a
+            belt buckle that is part of the character's geometry. Normally this would make it very difficult to change
+            the way it behaves when the rest of the model is stretching. However, by creating a component tag
+            encapsulating the vertices of the belt buckle and adding the Solidify Deformer onto it, now it no longer
+            stretches with the rest of the model. It retains its shape and moves with the surface. This seems like a
+            very useful tool that I could see myself using a lot.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 11 - 4: Morph Deformer</h3>
+          <h5>12-01-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/11_4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            The Morph Deformer allows you to morph the geometry of a shape with another (kind of like blend spaces but
+            for different use cases). In this exercise, we took a plain face and a duplicate of that geometry that had
+            been altered and used the Morph Deformer to blend the geometry. The cool thing about this tool is that you
+            can keep the original object intact while changing the features of the other object. This could be a good
+            way to go about changing a character's emotion on the fly without too much trouble. I may have to play with
+            this some more...</p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 11 - 3: Component Tags</h3>
+          <h5>12-01-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/11_3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Using Component tags, you can take selections of vertices, edges, or faces and create groups called
+            components. Then, in the attribute editor, you can select the component and it will select the group of
+            vertices/faces/edges to be edited as if they were selected using the selection tool. This seems like a very
+            useful tool and would save a lot of time in the modeling stage when working on a multi-faceted object with
+            many intricate details.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 11 - 2: Move Skinned Joint Tool</h3>
+          <h5>12-02-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <p>
+            Yet another very quick demonstration. This time on the Move Skinned Joint Tool. This tool allows for the
+            movement of a joint in an already skinned rig. Normally, if you were to move a joint in a skinned model, the
+            skin will move with it and it will just deform the model. However, with this tool active, skinning is
+            disabled and joints can be moved freely. Then, when you are finished with the tool, skinning is re-enabled
+            and everything is back to normal with the exception of the new joint placement having taken effect.</p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 11 - 1: Interactive Skin Bind Tool</h3>
+          <h5>12-02-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <p>
+            This was just a quick demonstration of how to use the Interactive Skin Bind Tool. It is esentially just
+            another way to bind skin to a rig. It seems overly complicated and not much detail was covered in the video
+            so I don't know if it is something I would use or if I just didn't get enough information on it.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 10 - 4: Change Walk Cycle Direction with Redirect</h3>
+          <h5>12-01-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/10_4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Using the Redirect tool, you can change the rotation or translation of an object without messing up the
+            animation. So, using the previous robot walk cycle, we added a redirect under the foot and set keyframes on
+            the Y rotation and rotated it slightly. This is a very cool technique. I am surprised that it was so easy to
+            use and love the fact that it doesn't change any of the underlying animation. I am sure that this same
+            effect could be achieved using animation layers, but this seems quicker and even less invasive than
+            animation layers.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 10 - 3: Edit Animation in the Time Editor</h3>
+          <h5>12-01-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <h3>Before</h3>
+          <video width="50%" controls>
+            <source src="images/blog/10_3_Before.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <h3>After</h3>
+          <video width="50%" controls>
+            <source src="images/blog/10_3_After.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            With the Time Editor, one can import an already existing animation clip and manipulate animations like you
+            would video tracks in editing software.
+            With this tool, we imported a walk cycle, found a spot where the run cycle timeline closely matched the spot
+            on the walk timeline, and lined it up so that the character could transition from one animation to the next.
+            This tool was kind of difficult for me to use, I kept going back and restarting from the beginning because
+            it was difficult to line up the animation just right and felt kind of awkward to use in this manner.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 10 - 2: Edit Characters with Pattern Rename</h3>
+          <h5>12-01-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <p>
+            In Bonus Tools, there is a tool called Pattern Rename.
+            This tool can be used to easily go through and rename objects in a scene without causing any errors to
+            occur.
+            You can search for a word and type in the replacement or add prefixes to selected objects.
+            It isn't a super complex tool but it will probably be useful to know about.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 10 - 1: Namespaces for Characters</h3>
+          <h5>12-01-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <p>
+            Namespaces are a simple and quick way to change the names of selected objects and unify them under a common
+            name.
+            For example, in the tutorial, all of the geometry and bones for a character model were added to a namespace
+            called MaleChar.
+            This then added "MaleChar:" in front of all desired objects. Namespaces can also be kept on import or export
+            of a model.
+            This basically is just a way to organize the objects in your scene so you don't get confused.
+            If there is a way to do this in Blender I'd like to know how to do it...
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 9 - 4: Creating a Head Aim Control</h3>
+          <h5>11-30-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/9_4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            In this exercise, we learned how to create an aim control for an object (a character's head) by using an aim
+            constraint.
+            However, when using an aim constraint, you can no longer aim the head at something other than the aim
+            controller.
+            To get around this limitation, we simply made a new group and changed its center to the same point as the
+            head controller.
+            Then we added the aim constraint to the group instead of the control itself.
+            By doing this, it allows the head to be controlled freely using the head controller or aimed using the head
+            aim controller.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 9 - 3: Import/Export Skin Weights</h3>
+          <h5>11-30-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <p>
+            Skin weights can be imported and exported from one file to another.
+            The bone names must be the same and the characters must be UV mapped but this is another way to save a lot
+            of time when it comes to weight painting multiple characters.
+            This is something that I will certainly need to use again in Maya if I use it for any character rigging
+            work.
+            It's strange, I strongly prefer the UI and workflow of Blender when I am modeling or sculpting yet, I think
+            that Maya is so much better and more intuitive for character rigging and and animation.
+            Perhaps I should try to utilize them both so that I can spend less time trying and more time doing.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 9 - 2: Copying Skin Weights</h3>
+          <h5>11-30-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <p>
+            When you have a character that is already weight-painted, rather than go through the whole process again,
+            you can use a tool in Maya called Copy Skin Weights.
+            This will only work if the skeletons and models are similar, but it will save time either way.
+            Basically, just scale one of the meshes so that they are roughly the same size, overlap them in the editor,
+            and click Copy Skin Weights and Maya will automatically apply the weight painting to the new rig.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 9 - 1: Using UVs to Select Vertices</h3>
+          <h5>11-30-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/9_1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Another quick demonstration, this time showing that selecting vertices, especially clusters in tight or hard
+            to reach areas, can be selected in the UV editor (provided UVs have been set up for that model).
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 8 - 4: A-Pose or T-Pose?</h3>
+          <h5>11-29-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <p>
+            This just went over the pros and cons of A vs T posing a character.
+            I usually use A-Pose because it helps with shoulder defenition and allows for better looking natural arm
+            poses.
+            The T-Pose is better for rigging and motion capture data.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 8 - 3: Rigging Cartoon Eyes</h3>
+          <h5>11-29-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/8_3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Just as in the previous exercise, we are focusing on cartoon eyes.
+            For this, we specifically went and created quick rigging controls for the eye and its components.
+            Using an aim constraint, the target control can direct the pupil direction.
+            Using cluster deform and parenting each cluster of lattice vertices to the individual corner and squish
+            controls we can change the shape of the eye.
+            And, by using Set Driven Key, we can use a slider to change the rotation of the eyelid.
+            This could also be done in the node editor but, for something this quick, set driven key will work just
+            fine.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 8 - 2: Cartoon Eyes using Lattices</h3>
+          <h5>11-29-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/8_2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <img class="zoom" src="../Blog/images/blog/8_2.jpg" alt="Cartoon Eyes" style="width:50%">
+          <p>
+            In this exercise, we took some sphere-shaped eyes and eyelids and used lattices to distort them into
+            "cartoon eyes".
+            The effect is great and it the rotation of the eye and eylid still work as they should even though the shape
+            is completely different.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 8 - 1: Using Nodes Instead of Constraints</h3>
+          <h5>11-29-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <p>
+            This was just a very quick demonstration of how one can use the node editor in place of constraints when
+            parenting a joint to a control (in this instance, a circle control).
+            I'm surprised that this is such a simple task and even more surprised that it wasn't shown earlier in the
+            course and then used for things like ribbon rigging.
+            Rather than parenting using a parent constraint, all you have to do is open the node editor with both items
+            selected and drag the rotation and scale nodes from the parent to the child object.
+            For translation, the only extra step that needs to be taken is to go into the object's attribute editor and
+            copy the translation values to the Transform Offset Parent Matrix before resetting the transform attributes
+            to zero and linking the nodes in the node editor.
+            I don't know too much about the work that happens behind-the-scenes with parent constraints, but I do know
+            that earlier in this course we learned that it was better to use Offset Parent Matrices and the Node Editor.
+            This is really just a more concise re-iteration of that point.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 7 - 4: Controlling Stretch with Tension</h3>
+          <h5>11-27-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/7_4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            The Tension deformer is similar to Delta Mush in that it is used to smooth the distortion of vertices.
+            However, Delta Mush is mainly used when squashing an object (like with the creasing of the leg and pelvis in
+            the previous exercise), whereas Tension is best utilized in the stretching of a mesh.
+            So, with this outstretched arm, the geometry starts to buldge a bit and become distorted as the shoulder is
+            rotated. With Tension, that evens out the distance between the vertices and smooths out the whole thing,
+            making it look much better.
+            However, this also then caused there to be some distortion on the opposite side of the shoulder where
+            vertices were bunched close together.
+            Rather than painting the area to keep it from deforming, all that was needed to fix the problem was to
+            reduce the Squash Constraint from 1 to 0.
+            This will allow that shoulder to utilize the tension deformation when it stretches in the oposite direction
+            as well.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 7 - 3: Smoothing Out Creases With Delta Mush</h3>
+          <h5>11-27-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/7_3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Delta Mush is a deformer that is used to, in this scenario, smooth out creases in a mesh without needing to
+            use weight painting (which most people consider to be a long and annoying process).
+            While it can be applied to the whole mesh, it is better to use it on an isolated area.
+            In this exercise, we used the used the painting tool to turn the Delta Mush that was applied to the entire
+            mesh and reduce the strenght to zero, effectively nullifying it.
+            Then, I painted along the crease in the mesh where the leg hits the pelvis to smooth out the area and remove
+            the unsightly crease.
+            This is a pretty interesting tool and I think that it will be very useful when working with
+            un-weight-painted meshes.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 7 - 2: Rokoko Motion Assets</h3>
+          <h5>11-27-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <p>
+            The Rokoko Motion Library is a plugin made by Rokoko for use in Maya that includes a library of mo-cap
+            animation data.
+            This works very similarly to other programs like Mixamo and ActorCore Accurig.
+            One caveat is that, from what I can tell, Rokoko hasn't updated the plug-in for Maya 2024 which means that I
+            am not currently able to use this animation library (bummer).
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 7 - 1: Working with HumanIK</h3>
+          <h5>11-27-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <img class="zoom" src="../Blog/images/blog/7_1.jpg" alt="HumanIK" style="width:50%">
+          <p>
+            This wasn't really an exercise so much as an introduction and overview of Maya's HumanIK tool.
+            Having done a little bit of hand blender and mostly utilizing auto-rigging add-ons or things like ActorCore
+            AccuRig and Mixamo to have the process mostly automated for me, I have a bit of an idea of how awful it is
+            to rig characters in the vanilla Blender software.
+            With that being said, Maya having this HumanIK BUILT IN TO THE SOFTWARE is pretty freaking cool.
+            I still can't quite believe just how in-depth it is as well. I am blown away by the thought of using this in
+            the future and seeing just how much it improves my workflow.
+            Even the small things are very interesting. For instance, there is the ability to add extra effectors to
+            joints to create extra points of rotation; in the example video it was used at the fingertips to make the
+            wrist pivot at the fingers instead of at the wrist joint.
+            There are also buttons that change the IK from moving just the selected joint, to a whole body part, to the
+            entire body. Then there is also the option to pin the translation and rotation of selected portions of the
+            rig to keep that part of the body stationary.
+            The last thing that was discussed was the Aux Effector. Essentially this is a small box created at a
+            specific joint that can keep it in place in a point in space while still allowing for movement and weight to
+            push against that part of the body.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 6 - 3: Animating Overlap Quickly</h3>
+          <h5>11-27-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/6_3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            As the title states, this was pretty quick. We animated a wagging dog tail.
+            The tail is made up of three joints and as the base of the tail moves, the ones further down follow.
+            All that was required to move the tail was to rotate the base of the tail by 20 degrees, the middle by 25,
+            and the tip by 30. Made some start and end keyframes.
+            Then using another handy dandy DASH EQUATION (mentioned in the last post) we multipled the value of each
+            rotation by negative 1 to get the inverse position.
+            Added another keyframe and we were met with a somewhat convincible wagging animation. However, it was still
+            to rigid and blocky.
+            To make the animation more fluid and make the weight of the tail appear as if it was moving like a real tail
+            that follows the laws of physics, we went into the graph editor and moved the keyframes for the middle
+            segment by two and the end segment by 4.
+            This slight delay in the rotation of each joint allows the tail to move in a much more realistic way.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 6 - 2: Walk Cycle to Progressive Animation</h3>
+          <h5>11-27-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/6_2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            For this exercise, we started with a robot with a walk animation. The animation is composed of a single step
+            with each foot.
+            From there, we went into the animation graph editor and created a walk cycle by cycling the animation to
+            infinity.
+            Following this, we added the animation to an animation layer and then, on a separate layer, animated a
+            translation on the Z axis for the moving components.
+            To make the movement follow the proper speed of the walk cycle, we did something that I had never previously
+            been taught or learned anywhere.
+            It's this: look at the start position of one foot and then use the distance from that to the end position.
+            After that, double it (one for each leg) and that is the proper value to add to each component to make it
+            move at a constant rate that matches the animation.
+            It is extremely simple, yet somehow never occured to me. I usually just try and eyeball it until it looks
+            right so from now on I will be using this as a guideline for walk cycles.
+            Ok, tangent aside, the movement was still kind of "slide-y" and the way to fix this is pretty common in all
+            animation (I even use it for blender), in the graph editor, I just had to select the Z translation for each
+            component and change the interpolation to linear.
+            This removes any smoothing between frames and makes things move as they are meant to. Then it was just a
+            matter of cycling the movement with the walk cycle and PRESTO! it moves.</p>
+          <p>
+            One little aspect of this lesson that I found super helpful was learning how to use a function to add the
+            same integer to each item's position without screwing everything up or having to do any math.
+            For example, if we are translating each piece of the robot by 11 for each cycle of 25 frames, we can just
+            select all of the geometry and type (in the specific value in the channel box) +=11 and it will add 11 to
+            each of the existing integers that correspond with that item. </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 6 - 1: Understanding Animation Layers</h3>
+          <h5>11-27-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/6_1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
           <video width="50%" controls>
             <source src="images/blog/6_1_2.mp4" type="video/mp4">
             Your browser does not support the video tag.
-        </video>      
-            <p>
-              First, I must say this: animation layers are amazing. In this exercise, we looked at how animation layers work and how to add to them in order to animate different parts of an animation on separate layers. 
-              This is something that is EXTREMELY useful when working with all of the subtle changes in character animation. Specifically, for this animation, we started with a character sitting in a pool that is looking around. Aside from the head turn and facial animation, the body of the character was static. 
-              From there, we added the selected animation to a new animation layer, locked it, and created a new layer. In the new animation layer we added a light bobbing motion to make the character look like it is floating in the water. 
-              Then, we added the foot IK controllers to that same animation layer and animated the feet movement both up and down and out to the sides to make his feet look like they are dangling in the water. 
-            </p>
-            <p>
-              I decided to take this one step further and add some animation to the characters arms. Rather than keeping them at his sides, I figured he looked more like a character that would have them extended above the water (kind of like a child) His arms were a bit high, so I lowered him further into the water and added some subtle rotation to his shoulders to keep his arms mostly above the water as he bobs up and down.
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
+          </video>
+          <p>
+            First, I must say this: animation layers are amazing. In this exercise, we looked at how animation layers
+            work and how to add to them in order to animate different parts of an animation on separate layers.
+            This is something that is EXTREMELY useful when working with all of the subtle changes in character
+            animation. Specifically, for this animation, we started with a character sitting in a pool that is looking
+            around. Aside from the head turn and facial animation, the body of the character was static.
+            From there, we added the selected animation to a new animation layer, locked it, and created a new layer. In
+            the new animation layer we added a light bobbing motion to make the character look like it is floating in
+            the water.
+            Then, we added the foot IK controllers to that same animation layer and animated the feet movement both up
+            and down and out to the sides to make his feet look like they are dangling in the water.
+          </p>
+          <p>
+            I decided to take this one step further and add some animation to the characters arms. Rather than keeping
+            them at his sides, I figured he looked more like a character that would have them extended above the water
+            (kind of like a child) His arms were a bit high, so I lowered him further into the water and added some
+            subtle rotation to his shoulders to keep his arms mostly above the water as he bobs up and down.
+          </p>
           <br>
+          <br>
+        </div>
+      </div>
+      <br>
 
       <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 5 - 6: Skinning Ribbon Rigs</h3>
-            <h5>11-25-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">
-            <video width="50%" controls>
-              <source src="images/blog/5_6.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video> 
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 5 - 6: Skinning Ribbon Rigs</h3>
+          <h5>11-25-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/5_6.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
           <video width="50%" controls>
             <source src="images/blog/5_6_2.mp4" type="video/mp4">
             Your browser does not support the video tag.
-        </video>      
-            <p>
-              This was a quick wrap-up on ribbon rigs. We just used Bind Skin to constrain the geometry to the the ribbon rig. 
-              Now, the movement and rotaion of the rig and joints will also deform the skin of the model as well.
-            </p>
-            <p>
-              Prior to this, I had never had any experience with ribbon rigs. Now I think I have a little bit better understanding of what they do and how to make them in Maya.
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
+          </video>
+          <p>
+            This was a quick wrap-up on ribbon rigs. We just used Bind Skin to constrain the geometry to the the ribbon
+            rig.
+            Now, the movement and rotaion of the rig and joints will also deform the skin of the model as well.
+          </p>
+          <p>
+            Prior to this, I had never had any experience with ribbon rigs. Now I think I have a little bit better
+            understanding of what they do and how to make them in Maya.
+          </p>
           <br>
+          <br>
+        </div>
+      </div>
+      <br>
 
       <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 5 - 5: Adding Deformers to a Ribbon Rig</h3>
-            <h5>11-25-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">   
-            <video width="50%" controls>
-              <source src="images/blog/5_5.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>  
-            <p>
-              To start, a quick adjustment was made to the ribbon plane to make the elbow bend in a smoother way. 
-              To do this, all it took was adding two isoparms to either side of the segment in the middle of the elbow joint. 
-              Now it has a more gradual bend towards the center of the elbow. Following that, we duplicated the ribbon plane and added a blendshape modifier to them. 
-              Then, to the blendshape, we added a twist deformer to the geometry. Then, in the node editor, the x-axis rotation of the wrist IK was connected to the start of the twist. 
-              Now, when the IK handle is rotated, it deforms the ribbon rig and twists it with the rotation of the wrist.
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 5 - 5: Adding Deformers to a Ribbon Rig</h3>
+          <h5>11-25-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/5_5.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            To start, a quick adjustment was made to the ribbon plane to make the elbow bend in a smoother way.
+            To do this, all it took was adding two isoparms to either side of the segment in the middle of the elbow
+            joint.
+            Now it has a more gradual bend towards the center of the elbow. Following that, we duplicated the ribbon
+            plane and added a blendshape modifier to them.
+            Then, to the blendshape, we added a twist deformer to the geometry. Then, in the node editor, the x-axis
+            rotation of the wrist IK was connected to the start of the twist.
+            Now, when the IK handle is rotated, it deforms the ribbon rig and twists it with the rotation of the wrist.
+          </p>
           <br>
+          <br>
+        </div>
+      </div>
+      <br>
 
 
       <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 5 - 4: Rigging a Flexible Arm with Ribbons</h3>
-            <h5>11-25-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">
-            <video width="50%" controls>
-              <source src="images/blog/5_4.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>     
-            <p>
-              Created more joints (5 of them) and lined them up using the joint nodes from last exercise. Now there is a joint for the shoulder, bicep, elbow, forearm, and wrist. From there, we used Bonus Tools to create a circle control. 
-              Once that was all finished, the new joints were parented to the joints on the existing skeleton. 
-              Some were just regular parent constraints while the bicep and forearm were point constraints with a second aim constraint that makes them keep the same orientation as the joint above them. 
-              This makes it so the bicep orientation will follow the shoulder and the forearm follows the elbow. Now, the ribbon moves and flexes with the movement of the skeleton. 
-              This should then make it easier to move the geometry on top of it. But I haven't gotten that far yet so I'm not quite sure.
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 5 - 4: Rigging a Flexible Arm with Ribbons</h3>
+          <h5>11-25-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/5_4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Created more joints (5 of them) and lined them up using the joint nodes from last exercise. Now there is a
+            joint for the shoulder, bicep, elbow, forearm, and wrist. From there, we used Bonus Tools to create a circle
+            control.
+            Once that was all finished, the new joints were parented to the joints on the existing skeleton.
+            Some were just regular parent constraints while the bicep and forearm were point constraints with a second
+            aim constraint that makes them keep the same orientation as the joint above them.
+            This makes it so the bicep orientation will follow the shoulder and the forearm follows the elbow. Now, the
+            ribbon moves and flexes with the movement of the skeleton.
+            This should then make it easier to move the geometry on top of it. But I haven't gotten that far yet so I'm
+            not quite sure.
+          </p>
           <br>
+          <br>
+        </div>
+      </div>
+      <br>
 
       <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 5 - 3: Setting Up a Ribbon Rig</h3>
-            <h5>11-25-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">
-            <video width="50%" controls>
-              <source src="images/blog/5_3.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>  
-            <p>
-              Created a nurbs plane, added segments, added hair folicles, deleted hair, placed joints in the location of the folicles. Now the joints are parented to the segments on the ribbon plane.
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 5 - 3: Setting Up a Ribbon Rig</h3>
+          <h5>11-25-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="images/blog/5_3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            Created a nurbs plane, added segments, added hair folicles, deleted hair, placed joints in the location of
+            the folicles. Now the joints are parented to the segments on the ribbon plane.
+          </p>
           <br>
-
-       <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 5 - 2: Bonus Tools</h3>
-            <h5>11-25-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">   
-            <p>
-                Notes go here...
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
           <br>
+        </div>
+      </div>
+      <br>
 
-        <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 5 - 1: Advanced Snapping for Joint Placement</h3>
-            <h5>11-25-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">   
-            <p>
-                Notes go here...
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 5 - 2: Bonus Tools</h3>
+          <h5>11-25-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <p>
+            Notes go here...
+          </p>
           <br>
+          <br>
+        </div>
+      </div>
+      <br>
 
-        <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 4 - 3: Picking Up Objects</h3>
-            <h5>11-22-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">  
-            <p></p>
-            <p>
-                In this exercise, we took an animation of a character moving his hand to a cup and bringing it up to his mouth and made the geometry of the cup follow his hand as he picked it up using parent constraints. 
-                By constraing the object at the frame in which it is picked up and then changing the value to zero on the keyframe before, the object will stay in place and then move with the parent once it reaches the desired frame. 
-                Another way of accomplishing this is to create a copy of the object, parent it to the character, and toggle the visibility of both objects on the frame where it is interacted with. 
-                The static object is visible until it reaches the interaction frame, and then the parented object becomes visible. 
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
+      <!-- Blog entry -->
+      <div class="blogEntry">
         <br>
+        <div class="entryTitle">
+          <h3>Section 5 - 1: Advanced Snapping for Joint Placement</h3>
+          <h5>11-25-2023</span></h5>
+        </div>
 
-         <!-- Blog entry -->
-         <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 4 - 2: Scaling Rigs</h3>
-            <h5>11-22-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">   
-            <p>
-                In order to scale all of the contents of a rig without deformation of the geometry, skeleton, etc; 
-                The best way is to create something simple such as a nurbs circle and then parenting all of the necessary contents (except for the geometry) to it. 
-                If the geometry is also added then it will not scale at the same rate as the skeleton. 
-                Now, when scaling or moving the nurbs circle, it will also affect all of the parented objects.
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
+        <div class="entryContent">
+          <p>
+            Notes go here...
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
         <br>
+        <div class="entryTitle">
+          <h3>Section 4 - 3: Picking Up Objects</h3>
+          <h5>11-22-2023</span></h5>
+        </div>
 
-        <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 4 - 1: Using the Pose Editor in Skinning</h3>
-            <h5>11-22-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">  
-            <video width="50%" controls>
-                <source src="../Blog/images/blog/2_10.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>  
-            <p></p>
-            <p>
-                In this exercise, the pose editor was used to make a bicep "flex" and look less deformed when in a bent position. 
-                Essentially, the geometry is edited during one frame and the pose editor allows the object to morph between the two instances as it approaches that keyframe. 
-                So, when the arm is straight it is normal and when bent it has the large gaps filled. 
-                Using the pose editor, it is possible to change the geometry of an object in frames where it is necessary. 
-                By using the pose editor rather than adjusting the geometry on the fly, it is then possible to return the geometry to its original shape when not in a specific pose.
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
+        <div class="entryContent">
+          <p></p>
+          <p>
+            In this exercise, we took an animation of a character moving his hand to a cup and bringing it up to his
+            mouth and made the geometry of the cup follow his hand as he picked it up using parent constraints.
+            By constraing the object at the frame in which it is picked up and then changing the value to zero on the
+            keyframe before, the object will stay in place and then move with the parent once it reaches the desired
+            frame.
+            Another way of accomplishing this is to create a copy of the object, parent it to the character, and toggle
+            the visibility of both objects on the frame where it is interacted with.
+            The static object is visible until it reaches the interaction frame, and then the parented object becomes
+            visible.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
         <br>
+        <div class="entryTitle">
+          <h3>Section 4 - 2: Scaling Rigs</h3>
+          <h5>11-22-2023</span></h5>
+        </div>
 
-        <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 3 - 4: Matrices Instead of Constraint in Rigs</h3>
-            <h5>11-14-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">  
-            <video width="50%" controls>
-                <source src="../Blog/images/blog/2_9.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>  
-            <p></p>
-            <p>
-                This exercise focused on using the Offset Parent Matrices from earlier in the course, this time in conjunction with a node in the Node Editor called pickMatrix. 
-                By running the matrix through a pickMatrix node, it allows for the separation of object transformation from the matrix. 
-                For instance, the Offset Parent Matrix lets the surfboard's translation, rotation, and scale alter that of the character that is being parented. 
-                By using the pickMatrix node and then deselecting "Use Scale" the surfboard can be scaled independently of the character. 
-                Another topic discussed in this video was the use of constraints which, in prior versions of Maya, was a more common way of parenting an object to another. 
-                By using a parent constraint, the transformation nodes of the child are unable to be edited as they are being controlled by the parent. 
-                However, using matrices, this is no longer an issue. The character can move completely independently from the parented surfboard without altering the surfboard or the matrix.
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
+        <div class="entryContent">
+          <p>
+            In order to scale all of the contents of a rig without deformation of the geometry, skeleton, etc;
+            The best way is to create something simple such as a nurbs circle and then parenting all of the necessary
+            contents (except for the geometry) to it.
+            If the geometry is also added then it will not scale at the same rate as the skeleton.
+            Now, when scaling or moving the nurbs circle, it will also affect all of the parented objects.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
         <br>
+        <div class="entryTitle">
+          <h3>Section 4 - 1: Using the Pose Editor in Skinning</h3>
+          <h5>11-22-2023</span></h5>
+        </div>
 
-        <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 3 - 3: Rigs for Dilating Pupils</h3>
-            <h5>11-14-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">  
-            <video width="50%" controls>
-                <source src="../Blog/images/blog/2_8.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>  
-            <p></p>
-            <p>
-                The focus on this exercise was using driven keys and blend shapes to dilate the pupil of an eyeball. 
-                Using a slider with driven keys causing the Y translation of the slider to blend the geometry as it moves from -1 to 1. 
-                At -1, the geometry is set to the narrow eye model, at 0 it is the regular eye model, and at 1 it becomes the dilated eye model. 
-                The blend shape allows the geometry to shift seemlessly between sizes and the driven keys make the change happen based on the location of the slider.
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="../Blog/images/blog/2_10.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p></p>
+          <p>
+            In this exercise, the pose editor was used to make a bicep "flex" and look less deformed when in a bent
+            position.
+            Essentially, the geometry is edited during one frame and the pose editor allows the object to morph between
+            the two instances as it approaches that keyframe.
+            So, when the arm is straight it is normal and when bent it has the large gaps filled.
+            Using the pose editor, it is possible to change the geometry of an object in frames where it is necessary.
+            By using the pose editor rather than adjusting the geometry on the fly, it is then possible to return the
+            geometry to its original shape when not in a specific pose.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
         <br>
+        <div class="entryTitle">
+          <h3>Section 3 - 4: Matrices Instead of Constraint in Rigs</h3>
+          <h5>11-14-2023</span></h5>
+        </div>
 
-         <!-- Blog entry -->
-         <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 3 - 2: Eye Direction and Head Turns</h3>
-            <h5>11-14-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">  
-            <video width="50%" controls>
-                <source src="../Blog/images/blog/2_7.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>  
-            <p></p>
-            <p>
-                This exercise focused on the way eyes move when a character is turning their head. 
-                When a person turns their head to look at something, their eyes will move slightly before the head. 
-                Following the previous exercise, the change in eye direction was combined with a blinking animation. 
-                When a character's head moves from side to side, it is also more lively/dynamic to add a sense of weight to the movement and the body by dipping the head down slightly during the arc of the head movement.
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="../Blog/images/blog/2_9.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p></p>
+          <p>
+            This exercise focused on using the Offset Parent Matrices from earlier in the course, this time in
+            conjunction with a node in the Node Editor called pickMatrix.
+            By running the matrix through a pickMatrix node, it allows for the separation of object transformation from
+            the matrix.
+            For instance, the Offset Parent Matrix lets the surfboard's translation, rotation, and scale alter that of
+            the character that is being parented.
+            By using the pickMatrix node and then deselecting "Use Scale" the surfboard can be scaled independently of
+            the character.
+            Another topic discussed in this video was the use of constraints which, in prior versions of Maya, was a
+            more common way of parenting an object to another.
+            By using a parent constraint, the transformation nodes of the child are unable to be edited as they are
+            being controlled by the parent.
+            However, using matrices, this is no longer an issue. The character can move completely independently from
+            the parented surfboard without altering the surfboard or the matrix.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
         <br>
+        <div class="entryTitle">
+          <h3>Section 3 - 3: Rigs for Dilating Pupils</h3>
+          <h5>11-14-2023</span></h5>
+        </div>
 
-        <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 3 - 1: Changing Eye Direction</h3>
-            <h5>11-14-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">  
-            <video width="50%" controls>
-                <source src="../Blog/images/blog/2_6.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>  
-            <p></p>
-            <p>
-                In this exercise, we learned about the nuances of changing a characters eye direction. 
-                Along with moving the eyes, subtle head movements and blinks are necessary to keep the character from feeling static or conveying an unintended emotion. 
-                Using the information from the previous exercise "Animating Blinks" I decided to take it one step further and also animate movement of the eyebrows.
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="../Blog/images/blog/2_8.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p></p>
+          <p>
+            The focus on this exercise was using driven keys and blend shapes to dilate the pupil of an eyeball.
+            Using a slider with driven keys causing the Y translation of the slider to blend the geometry as it moves
+            from -1 to 1.
+            At -1, the geometry is set to the narrow eye model, at 0 it is the regular eye model, and at 1 it becomes
+            the dilated eye model.
+            The blend shape allows the geometry to shift seemlessly between sizes and the driven keys make the change
+            happen based on the location of the slider.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
         <br>
+        <div class="entryTitle">
+          <h3>Section 3 - 2: Eye Direction and Head Turns</h3>
+          <h5>11-14-2023</span></h5>
+        </div>
 
-        <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 2 - 5: Animating Blinks</h3>
-            <h5>11-9-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">  
-            <video width="50%" controls>
-                <source src="../Blog/images/blog/2_5.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>  
-            <p></p>
-            <p>
-                In this exercise we learned about animating blinks (of course). 
-                The instructor went over the details of blinking in animation and how it is used with movement, mood, and making a character feel like a living being. 
-                Blinking alone is not enough to make a character look "alive". 
-                For this exercise, the head and eyebrows were moved in conjunction with the blinking animation, which makes the character look less like a terrifying doll.
-            </p>
-            <p>
-                For the sequence of 3 blinks, the first includes the movement of the head and eyebrows while the second and third are merely the movement of the eyelids.
-                Seeing the two types of blink side-by-side really shows how the subtle movements create a more dynamic animation in contrast to the eyelids just moving up and down.
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="../Blog/images/blog/2_7.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p></p>
+          <p>
+            This exercise focused on the way eyes move when a character is turning their head.
+            When a person turns their head to look at something, their eyes will move slightly before the head.
+            Following the previous exercise, the change in eye direction was combined with a blinking animation.
+            When a character's head moves from side to side, it is also more lively/dynamic to add a sense of weight to
+            the movement and the body by dipping the head down slightly during the arc of the head movement.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
         <br>
+        <div class="entryTitle">
+          <h3>Section 3 - 1: Changing Eye Direction</h3>
+          <h5>11-14-2023</span></h5>
+        </div>
 
-        <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 2 - 4: Rivet Command</h3>
-            <h5>11-9-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">  
-            <p>
-                By constraining an object to another using the rivet command, you can add an object to a scene that is already animated with a very short process. 
-                In the exercise, we riveted a hat model to a point on the mesh of a character that is walking and jumping. 
-                The hat stays in place with the geometry without deforming.
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="../Blog/images/blog/2_6.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p></p>
+          <p>
+            In this exercise, we learned about the nuances of changing a characters eye direction.
+            Along with moving the eyes, subtle head movements and blinks are necessary to keep the character from
+            feeling static or conveying an unintended emotion.
+            Using the information from the previous exercise "Animating Blinks" I decided to take it one step further
+            and also animate movement of the eyebrows.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
         <br>
+        <div class="entryTitle">
+          <h3>Section 2 - 5: Animating Blinks</h3>
+          <h5>11-9-2023</span></h5>
+        </div>
 
-        <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 2 - 3: Proximity Wrapping</h3>
-            <h5>11-9-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">  
-            <video width="50%" controls>
-                <source src="../Blog/images/blog/2_3.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>  
-            <p></p>
-            <p>
-                Proximity wrapping is used when conforming a mesh to another. 
-                In this exercise, we used a low resolution arm mesh with animation attached to it and proximity wrapped a higher resolution mesh (and a bracelet) to it. 
-                By doing this, one can animate a lower resolution mesh and cut down on processing power due to the reduced number of vertices. 
-                Then, when nearing the end of the project, a more detailed and high resolution mesh can be proximity wrapped and be used for the final render.
-		    </p>
-            <br>
-            <br>
-            </div>
-          </div>
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="../Blog/images/blog/2_5.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p></p>
+          <p>
+            In this exercise we learned about animating blinks (of course).
+            The instructor went over the details of blinking in animation and how it is used with movement, mood, and
+            making a character feel like a living being.
+            Blinking alone is not enough to make a character look "alive".
+            For this exercise, the head and eyebrows were moved in conjunction with the blinking animation, which makes
+            the character look less like a terrifying doll.
+          </p>
+          <p>
+            For the sequence of 3 blinks, the first includes the movement of the head and eyebrows while the second and
+            third are merely the movement of the eyelids.
+            Seeing the two types of blink side-by-side really shows how the subtle movements create a more dynamic
+            animation in contrast to the eyelids just moving up and down.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
         <br>
+        <div class="entryTitle">
+          <h3>Section 2 - 4: Rivet Command</h3>
+          <h5>11-9-2023</span></h5>
+        </div>
 
-        <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 2 - 2: UV Pins</h3>
-            <h5>11-9-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">  
-            <video width="50%" controls>
-                <source src="../Blog/images/blog/2_2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>  
-            <p></p>
-            <p>
+        <div class="entryContent">
+          <p>
+            By constraining an object to another using the rivet command, you can add an object to a scene that is
+            already animated with a very short process.
+            In the exercise, we riveted a hat model to a point on the mesh of a character that is walking and jumping.
+            The hat stays in place with the geometry without deforming.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 2 - 3: Proximity Wrapping</h3>
+          <h5>11-9-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="../Blog/images/blog/2_3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p></p>
+          <p>
+            Proximity wrapping is used when conforming a mesh to another.
+            In this exercise, we used a low resolution arm mesh with animation attached to it and proximity wrapped a
+            higher resolution mesh (and a bracelet) to it.
+            By doing this, one can animate a lower resolution mesh and cut down on processing power due to the reduced
+            number of vertices.
+            Then, when nearing the end of the project, a more detailed and high resolution mesh can be proximity wrapped
+            and be used for the final render.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 2 - 2: UV Pins</h3>
+          <h5>11-9-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="../Blog/images/blog/2_2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p></p>
+          <p>
             Using UV pins is similar to Proximity Pins except that it uses the UV coordinates of a deformed surface.
-		    </p>
-            <br>
-            <br>
-            </div>
-          </div>
-        <br>
-
-
-         <!-- Blog entry -->
-         <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 2 - 1: Proximity Pins</h3>
-            <h5>11-9-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">  
-            <p>
-            Using proximity pins is one way to parent an object to a deformable mesh so that it can move along with the deformed surface. In this exercise, we pinned a 
-		    soul patch to a character's chin so that it would move with the chin as the mouth and chin were deformed.
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
-        <br>
-
-        <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 1 - 4: Animation Timeline Bookmarks</h3>
-            <h5>11-1-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">  
-            <p>
-            By setting bookmarks for portions of animations along the animation timeline, it becomes easier to find animated movements for duplication and editing.
-            You can also zoom in on a specific bookmark to see only the transformations taking place in that portion of the timeline. This is great for organization
-            and saving time later on when animating in chunks. 
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
-        <br>
-
-         <!-- Blog entry -->
-         <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 1 - 2: Offset Parent Matrices</h3>
-            <h3>Section 1 - 3: Scripting Offset Parent Matrices</h3>
-            <h5>11-1-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">  
-            <p></p>
-            <img class="zoom" src="../Blog/images/blog/Script Editor.jpg" alt="Script Editor" style="width:50%">   
-            <br>
-            <p>
-            Using Offset Parent Matrices, you can change the position and orientation of an object without affecting its original location in space. 
-		    This allows things to be animated more efficiently.
-            </p>
-            <p>
-		    Using the Script Editor in combination with the Node Editor, we created a simple script that automates a portion of the Offset Parent Matrices workflow for
-		    quick and repeatable use.
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
-        <br>
-
-         <!-- Blog entry -->
-         <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Section 1 - 1: Object Swapping</h3>
-            <h5>11-1-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">  
-            <video width="50%" controls>
-                <source src="../Blog/images/blog/1_1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>  
-            <p></p>
-            <img class="zoom" src="../Blog/images/blog/Visibility Nodes - Mouth Replacement.jpg" alt="Visibility Nodes" style="width:50%">   
-            <br>
-            <p>
-		        Using the Node Editor, we created a node structure that parented the visibility of each mouth asset to a specific point of movement along the X-axis
-		        of a sliding piece of geometry. This effect is great for animating stop-motion mouths. 
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
-        <br>
-
-        <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Pre-Update-Update</h3>
-            <h5>11-1-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">
-            <p>
-              One thing that I wish I had done during the intro course was take some screen-recordings of the progress. I have notes but they feel kind of boring on their own. 
-            So, for this course I have been taking screenshots and recordings of the end-product for each exercise.</p>
-            <p>
-                Having said that, the following entries will be quick breakdowns of each exercise along with a recording or screenshot of the work.
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
-        <br>
-        
-        <!-- Blog entry -->
-        <div class="blogEntry">
-            <br>
-          <div class="entryTitle">
-            <h3>Animation and Rigging</h3>
-            <h5>10-30-2023</span></h5>
-          </div>
-    
-          <div class="entryContent">
-            <p>
-                I finally started the 3D Animation and Rigging course. It is split up into small sections like the previous course but it feels like a much more enjoyable experience
-                so far. There were some elements of Maya that I found hard to acclimate to but with these smaller, more focused examples the content seems easier to grasp. 
-                I do think that I would be having trouble had I not started with the Intro and learned the basics of the software prior to this. One last thing: 
-                I enjoy 3D modeling but, for some reason, doing it in Maya feels like a chore, perhaps that is because it is mainly what I have been doing in Blender for my studio project. 
-                Either way, doing the actual animation work and just forgetting about the modeling feels kind of relaxing.
-            </p>
-            <br>
-            <br>
-            </div>
-          </div>
-        <br>
-
-
-        <!-- Blog entry -->
-        <div class="blogEntry">
+          </p>
           <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 2 - 1: Proximity Pins</h3>
+          <h5>11-9-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <p>
+            Using proximity pins is one way to parent an object to a deformable mesh so that it can move along with the
+            deformed surface. In this exercise, we pinned a
+            soul patch to a character's chin so that it would move with the chin as the mouth and chin were deformed.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 1 - 4: Animation Timeline Bookmarks</h3>
+          <h5>11-1-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <p>
+            By setting bookmarks for portions of animations along the animation timeline, it becomes easier to find
+            animated movements for duplication and editing.
+            You can also zoom in on a specific bookmark to see only the transformations taking place in that portion of
+            the timeline. This is great for organization
+            and saving time later on when animating in chunks.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 1 - 2: Offset Parent Matrices</h3>
+          <h3>Section 1 - 3: Scripting Offset Parent Matrices</h3>
+          <h5>11-1-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <p></p>
+          <img class="zoom" src="../Blog/images/blog/Script Editor.jpg" alt="Script Editor" style="width:50%">
+          <br>
+          <p>
+            Using Offset Parent Matrices, you can change the position and orientation of an object without affecting its
+            original location in space.
+            This allows things to be animated more efficiently.
+          </p>
+          <p>
+            Using the Script Editor in combination with the Node Editor, we created a simple script that automates a
+            portion of the Offset Parent Matrices workflow for
+            quick and repeatable use.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Section 1 - 1: Object Swapping</h3>
+          <h5>11-1-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <video width="50%" controls>
+            <source src="../Blog/images/blog/1_1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p></p>
+          <img class="zoom" src="../Blog/images/blog/Visibility Nodes - Mouth Replacement.jpg" alt="Visibility Nodes"
+            style="width:50%">
+          <br>
+          <p>
+            Using the Node Editor, we created a node structure that parented the visibility of each mouth asset to a
+            specific point of movement along the X-axis
+            of a sliding piece of geometry. This effect is great for animating stop-motion mouths.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Pre-Update-Update</h3>
+          <h5>11-1-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <p>
+            One thing that I wish I had done during the intro course was take some screen-recordings of the progress. I
+            have notes but they feel kind of boring on their own.
+            So, for this course I have been taking screenshots and recordings of the end-product for each exercise.</p>
+          <p>
+            Having said that, the following entries will be quick breakdowns of each exercise along with a recording or
+            screenshot of the work.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
+        <div class="entryTitle">
+          <h3>Animation and Rigging</h3>
+          <h5>10-30-2023</span></h5>
+        </div>
+
+        <div class="entryContent">
+          <p>
+            I finally started the 3D Animation and Rigging course. It is split up into small sections like the previous
+            course but it feels like a much more enjoyable experience
+            so far. There were some elements of Maya that I found hard to acclimate to but with these smaller, more
+            focused examples the content seems easier to grasp.
+            I do think that I would be having trouble had I not started with the Intro and learned the basics of the
+            software prior to this. One last thing:
+            I enjoy 3D modeling but, for some reason, doing it in Maya feels like a chore, perhaps that is because it is
+            mainly what I have been doing in Blender for my studio project.
+            Either way, doing the actual animation work and just forgetting about the modeling feels kind of relaxing.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
         <div class="entryTitle">
           <h3>Some Renders</h3>
           <h5>10-23-2023</span></h5>
         </div>
-  
+
         <div class="entryContent">
-            <img class="zoom" src="../Blog/images/blog/MayaRender1.jpg" alt="Car Render Front" style="width:50%">      
-            <img class="zoom" src="../Blog/images/blog/MayaRender2.jpg" alt="Car Render Back" style="width:50%">
+          <img class="zoom" src="../Blog/images/blog/MayaRender1.jpg" alt="Car Render Front" style="width:50%">
+          <img class="zoom" src="../Blog/images/blog/MayaRender2.jpg" alt="Car Render Back" style="width:50%">
           <br>
           <p>
-            I decided to use this week as a review week. I started fresh in a new scene and modeled this car after I saw a picture of a similar one that someone made in Blender. I used many techniques from the 2024 Essential Training course and tried to spend more time getting familiar with the materials and the different settings for them.
-            It certainly isn't perfect but I think that it went rather well considering I have only just learned the basics of the software. I am thinking about adding a spinning sphere underneath the car with terrain and a road on it and then animating it and the wheels so that they revolve around the Y Axis and then turn the exported image sequence into a looping gif.
+            I decided to use this week as a review week. I started fresh in a new scene and modeled this car after I saw
+            a picture of a similar one that someone made in Blender. I used many techniques from the 2024 Essential
+            Training course and tried to spend more time getting familiar with the materials and the different settings
+            for them.
+            It certainly isn't perfect but I think that it went rather well considering I have only just learned the
+            basics of the software. I am thinking about adding a spinning sphere underneath the car with terrain and a
+            road on it and then animating it and the wheels so that they revolve around the Y Axis and then turn the
+            exported image sequence into a looping gif.
           </p>
           <p>
-            I haven't had enough time to start my next Maya course yet, but I have decided that the next one I will be starting is "3D Animation and Rigging" on LinkedIn Learning. It is taught by the same instructor from the previous course I finished and it looks very promising. <a href="https://www.linkedin.com/learning/3d-animation-and-rigging/create-rigging-and-animation-with-maya">Here is a link.</a> 
+            I haven't had enough time to start my next Maya course yet, but I have decided that the next one I will be
+            starting is "3D Animation and Rigging" on LinkedIn Learning. It is taught by the same instructor from the
+            previous course I finished and it looks very promising. <a
+              href="https://www.linkedin.com/learning/3d-animation-and-rigging/create-rigging-and-animation-with-maya">Here
+              is a link.</a>
           </p>
           <br>
           <br>
-          </div>
         </div>
+      </div>
       <br>
-        
-         <!-- Blog entry -->
-         <div class="blogEntry">
-          <br>
+
+      <!-- Blog entry -->
+      <div class="blogEntry">
+        <br>
         <div class="entryTitle">
           <h3>First LinkedIn Learning Course Finished</h3>
           <h5>10-15-2023</span></h5>
         </div>
-  
-        <div class="entryContent">
-            <img class="zoom" src="../Blog/images/blog/certificate.jpg" alt="certificate" style="width:50%">
-          <br>
-            <p>Tonight I finished the Maya 2024 Essential Training course on LinkedIn Learning. It was a very good introduction to Maya and I definitely feel more comfortable using the software than before. The course consisted of 11 chapters and touched on the majority of the basic tools, menus, and techniques
-             for modeling and making simple animations.
-            </p>
-            <p>I am planning on using my notes and doing a writeup of everything the chapters went through and things that I find are implemented in a way that I feel is better or worse than in Blender. The course videos were brief with the majority of them being less than
-              or equal to five minutes. I found myself needing to go back and re-watch the videos as I was following along with the project files. 
-            </p>
-            <p>I thought that the use of the project files throughout the course was useful yet also could have been done better. For instance, I would say that the best way to 
-              get someone to learn a program, especially one as dense with features as Maya, is to get them to iterate on top of the same project until it incorporates everything in each/every chapter. I am planning on doing this myself by making my own version of the course project from start to finish, 
-              rather than using one tool and then changing to the next file as was done in the course. Doing this would allow me to get further acquainted with Maya and have something to show that is actually my own work rather than a bunch of premade files in which I have only contributed with minor adjustments. 
-            </p>
-          <br>
-          <br>
-          </div>
-        </div>   
-          <br>
-          <br>
-          <br>
-          <br>
-              
-  
-      </div>
-    </div>
 
-    <div id="footer" class="footer">
-        <!-- <div class="row">
+        <div class="entryContent">
+          <img class="zoom" src="../Blog/images/blog/certificate.jpg" alt="certificate" style="width:50%">
+          <br>
+          <p>Tonight I finished the Maya 2024 Essential Training course on LinkedIn Learning. It was a very good
+            introduction to Maya and I definitely feel more comfortable using the software than before. The course
+            consisted of 11 chapters and touched on the majority of the basic tools, menus, and techniques
+            for modeling and making simple animations.
+          </p>
+          <p>I am planning on using my notes and doing a writeup of everything the chapters went through and things that
+            I find are implemented in a way that I feel is better or worse than in Blender. The course videos were brief
+            with the majority of them being less than
+            or equal to five minutes. I found myself needing to go back and re-watch the videos as I was following along
+            with the project files.
+          </p>
+          <p>I thought that the use of the project files throughout the course was useful yet also could have been done
+            better. For instance, I would say that the best way to
+            get someone to learn a program, especially one as dense with features as Maya, is to get them to iterate on
+            top of the same project until it incorporates everything in each/every chapter. I am planning on doing this
+            myself by making my own version of the course project from start to finish,
+            rather than using one tool and then changing to the next file as was done in the course. Doing this would
+            allow me to get further acquainted with Maya and have something to show that is actually my own work rather
+            than a bunch of premade files in which I have only contributed with minor adjustments.
+          </p>
+          <br>
+          <br>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+
+
+    </div>
+  </div>
+
+  <div id="footer" class="footer">
+    <!-- <div class="row">
             
             <div class="column">
                 <img src="../Blog/images/instagram.png" alt="instagram logo" style="width:100%">
             </div>
             
         </div> -->
-    </div>
+  </div>
 
 </body>
 
